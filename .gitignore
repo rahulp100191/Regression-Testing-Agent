@@ -1,5 +1,6 @@
 node_modules/
 .next/
+frontend/out/
 frontend/.env.local
 backend/.venv/
 backend/__pycache__/
@@ -8,4 +9,3 @@ backend/.pytest_cache/
 .env
 .env.*
 !.env.example
-

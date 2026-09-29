@@ -1,6 +1,6 @@
 # Workday Release Regression Agent
 
-An explainable regression-test triage tool for Workday releases. Upload a release-notes workbook and an E2E test catalog; the app ranks likely candidates, asks Gemini to make a grounded selection, calculates confidence signals, and flags uncertain matches for human review.
+An explainable regression-test triage tool for Workday releases. Upload a release-notes workbook and an E2E test catalog; the app ranks likely candidates, asks Amazon Bedrock to make a grounded selection, calculates confidence signals, and flags uncertain matches for human review.
 
 ![Workflow](https://img.shields.io/badge/workflow-upload%20%E2%86%92%20shortlist%20%E2%86%92%20review-1f6feb)
 ![Backend](https://img.shields.io/badge/backend-FastAPI-009688)
@@ -11,7 +11,7 @@ An explainable regression-test triage tool for Workday releases. Upload a releas
 - Validates both `.xlsx` uploads and reports their sheet/row counts before analysis.
 - Reads the first non-empty worksheet and maps release-note fields to the E2E catalog.
 - Uses deterministic lexical, fuzzy-title, product-area, and work-stream signals to shortlist candidates.
-- Uses Gemini only to choose from the shortlist; it cannot invent an E2E catalog value.
+- Uses Amazon Bedrock only to choose from the shortlist; it cannot invent an E2E catalog value.
 - Returns evidence, reasoning, confidence bands, evaluation signals, and an explicit review flag for every release row.
 - Exports the result table as CSV. Uploaded files and results are kept in memory for the current session only.
 
@@ -22,7 +22,7 @@ Next.js UI (localhost:3000)
         │ multipart upload / JSON results
         ▼
 FastAPI API (localhost:8000)
-        │ parse + shortlist + grounded Gemini review
+        │ parse + shortlist + grounded Bedrock review
         ▼
 Release workbook + E2E catalog workbook
 ```
@@ -38,7 +38,7 @@ py -m venv .venv
 pip install -r requirements.txt
 cd ..
 Copy-Item .env.example .env
-# Edit .env and set GEMINI_API_KEY. Keep this file private.
+# Edit .env if you need to override the Bedrock region/model. Keep this file private.
 cd backend
 uvicorn app:app --reload --port 8000
 ```
@@ -75,12 +75,12 @@ Copy `.env.example` to `.env` and configure:
 
 | Variable | Purpose |
 | --- | --- |
-| `GEMINI_API_KEY` | Backend-only Gemini credential. Never commit it. |
-| `GEMINI_MODELS` | Comma-separated model fallback order. |
+| `AWS_REGION` | AWS region used for Bedrock, defaulting to `ap-south-1`. |
+| `BEDROCK_MODEL_ID` | Bedrock model or inference-profile ID, defaulting to Amazon Nova Lite. |
 | `REVIEW_THRESHOLD` | Minimum confidence before a match can be marked ready. |
 | `FRONTEND_ORIGIN` | Allowed browser origin for CORS. |
 
-If `GEMINI_API_KEY` is absent, the app still parses and shortlists files but returns a safe, review-required fallback.
+The deployed Lambda uses its IAM execution role to call Bedrock; no model API key is stored in the application. If Bedrock is unavailable, the app still parses and shortlists files but returns a safe, review-required fallback.
 
 ## Quality checks
 

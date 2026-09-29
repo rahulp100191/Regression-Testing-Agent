@@ -8,7 +8,7 @@ from difflib import SequenceMatcher
 from pathlib import Path
 from typing import Any
 
-import httpx
+import boto3
 from fastapi import FastAPI, File, HTTPException, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
 from openpyxl import load_workbook
@@ -101,8 +101,8 @@ def shortlist(release: dict[str, Any], e2e_rows: list[dict[str, Any]], limit: in
     return [{**candidate, "shortlist_score": round(score, 4)} for score, candidate in scored[:limit]]
 
 
-def model_list() -> list[str]:
-    return [model.strip() for model in os.getenv("GEMINI_MODELS", "gemini-flash-latest,gemini-3.5-flash-lite,gemini-2.5-flash-lite").split(",") if model.strip()]
+def bedrock_model_id() -> str:
+    return os.getenv("BEDROCK_MODEL_ID", "amazon.nova-lite-v1:0").strip()
 
 
 def review_threshold() -> int:
@@ -161,10 +161,11 @@ def validate_result(value: dict[str, Any], candidates: list[dict[str, Any]] | li
     return {"decision": decision, "business_process_name": clean(value.get("business_process_name")) or None, "e2e_name": selected, "confidence": confidence, "confidence_band": band, "reasoning": clean(value.get("reasoning")) or "The model did not provide sufficient grounded reasoning.", "evidence": evidence, "review_required": review_required, "evaluation": {"model_confidence": model_confidence, "lexical_relevance": lexical_relevance, "candidate_rank": rank, "candidate_margin": round(max(0, top_score - second_score), 4), "evidence_grounding": evidence_grounding, "selection_agreement": selection_agreement}}
 
 
-async def ask_gemini(release: dict[str, Any], candidates: list[dict[str, Any]]) -> dict[str, Any]:
-    api_key = os.getenv("GEMINI_API_KEY", "").strip()
-    if not api_key:
-        return fallback_result("Gemini is not configured. Add GEMINI_API_KEY on the backend to identify a test case.", candidates)
+async def ask_bedrock(release: dict[str, Any], candidates: list[dict[str, Any]]) -> dict[str, Any]:
+    try:
+        client = boto3.client("bedrock-runtime", region_name=os.getenv("AWS_REGION", "ap-south-1"))
+    except Exception as exc:
+        return fallback_result(f"Amazon Bedrock is not configured: {exc}", candidates)
     candidate_names = [candidate["e2e"] for candidate in candidates]
     prompt = f"""You are a cautious Workday regression-test analyst. Identify the single best matching E2E job/test case for this release note, but do not guess. Choose only an exact value from the candidate list. Return JSON only with keys decision, business_process_name, e2e_name, confidence, confidence_band, reasoning, evidence, review_required. decision must be match, unable_to_identify, or no_matching_e2e. confidence must be an integer 0-100. Use low confidence and review_required=true when evidence is weak. evidence must be an array of short exact phrases copied from the release note, not a single string. Keep reasoning grounded in the supplied release note.
 
@@ -174,25 +175,16 @@ Release note:
 Candidate E2E catalog values:
 {json.dumps(candidate_names, ensure_ascii=False)}
 """
-    payload = {"contents": [{"parts": [{"text": prompt}]}], "generationConfig": {"responseMimeType": "application/json"}}
-    errors = []
-    async with httpx.AsyncClient(timeout=45) as client:
-        for model in model_list():
-            url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
-            try:
-                response = await client.post(url, params={"key": api_key}, json=payload)
-                if response.status_code in {401, 403}:
-                    return fallback_result("Gemini authentication failed. Rotate and configure GEMINI_API_KEY.", candidates)
-                if response.status_code in {404, 429} or response.status_code >= 500:
-                    errors.append(f"{model}: HTTP {response.status_code}")
-                    continue
-                response.raise_for_status()
-                body = response.json()
-                text = body["candidates"][0]["content"]["parts"][0]["text"]
-                return validate_result(extract_json(text), candidates, release_text(release))
-            except (httpx.HTTPError, KeyError, IndexError, ValueError, json.JSONDecodeError) as exc:
-                errors.append(f"{model}: {exc}")
-    return fallback_result("Gemini could not be reached with the configured models: " + "; ".join(errors), candidates)
+    try:
+        response = client.converse(
+            modelId=bedrock_model_id(),
+            messages=[{"role": "user", "content": [{"text": prompt}]}],
+            inferenceConfig={"maxTokens": 1200, "temperature": 0.1},
+        )
+        text = next(part["text"] for part in response["output"]["message"]["content"] if "text" in part)
+        return validate_result(extract_json(text), candidates, release_text(release))
+    except Exception as exc:
+        return fallback_result(f"Amazon Bedrock could not be reached: {exc}", candidates)
 
 
 app = FastAPI(title="Workday Release Regression Agent API", version="1.0.0")
@@ -201,7 +193,7 @@ app.add_middleware(CORSMiddleware, allow_origins=[os.getenv("FRONTEND_ORIGIN", "
 
 @app.get("/api/health")
 async def health():
-    return {"status": "ok", "gemini_configured": bool(os.getenv("GEMINI_API_KEY", "").strip()), "models": model_list(), "review_threshold": review_threshold()}
+    return {"status": "ok", "bedrock_region": os.getenv("AWS_REGION", "ap-south-1"), "bedrock_model": bedrock_model_id(), "review_threshold": review_threshold()}
 
 
 @app.post("/api/preview")
@@ -222,7 +214,7 @@ async def analyze(release_file: UploadFile = File(...), e2e_file: UploadFile = F
     results = []
     for row in release["rows"]:
         candidates = shortlist(row, e2e["rows"])
-        result = await ask_gemini(row, candidates)
+        result = await ask_bedrock(row, candidates)
         result.update({"source_row": row["source_row"], "release": row, "shortlisted_candidates": [candidate["e2e"] for candidate in candidates]})
         result["review_required"] = result["review_required"] or result["confidence"] < review_threshold()
         results.append(result)
