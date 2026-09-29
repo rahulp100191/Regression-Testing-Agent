@@ -120,10 +120,10 @@ def extract_json(text: str) -> dict[str, Any]:
     text = re.sub(r"^```(?:json)?\s*|\s*```$", "", text.strip(), flags=re.IGNORECASE | re.DOTALL).strip()
     start, end = text.find("{"), text.rfind("}")
     if start < 0 or end <= start:
-        raise ValueError("Gemini response did not contain a JSON object")
+        raise ValueError("Bedrock response did not contain a JSON object")
     value = json.loads(text[start:end + 1])
     if not isinstance(value, dict):
-        raise ValueError("Gemini response was not an object")
+        raise ValueError("Bedrock response was not an object")
     return value
 
 
