@@ -75,7 +75,7 @@ Copy `.env.example` to `.env` and configure:
 
 | Variable | Purpose |
 | --- | --- |
-| `AWS_REGION` | AWS region used for Bedrock, defaulting to `ap-south-1`. |
+| `AWS_REGION` | AWS region used for Bedrock, defaulting to `ap-southeast-2`. |
 | `BEDROCK_MODEL_ID` | Bedrock model or inference-profile ID, defaulting to Amazon Nova Lite. |
 | `REVIEW_THRESHOLD` | Minimum confidence before a match can be marked ready. |
 | `FRONTEND_ORIGIN` | Allowed browser origin for CORS. |
@@ -92,6 +92,60 @@ npm run build
 ```
 
 Continuous integration runs both checks on pushes and pull requests. See [`.github/workflows/ci.yml`](.github/workflows/ci.yml).
+
+## AWS deployment with Amazon Bedrock
+
+The deployment target is `ap-southeast-2` (Sydney), matching the AWS console URL. The backend is prepared for AWS Lambda behind an API Gateway HTTP API. Lambda calls Amazon Bedrock using its IAM role, so no Bedrock API key is stored in the application.
+
+### Prerequisites
+
+- AWS account with Amazon Bedrock model access enabled for Amazon Nova Lite in Sydney.
+- AWS CLI v2 and AWS SAM CLI installed and authenticated with an IAM identity.
+- An AWS Budgets zero-spend alert configured before deploying.
+
+Check the tools:
+
+```powershell
+aws --version
+sam --version
+aws sts get-caller-identity
+```
+
+### Deploy the backend
+
+Run from the repository root:
+
+```powershell
+$env:AWS_DEFAULT_REGION = "ap-southeast-2"
+sam build --template-file infra/template.yaml
+sam deploy --guided --template-file .aws-sam\build\template.yaml
+```
+
+During the guided deployment, use a stack name such as `workday-regression-agent`, keep the region as `ap-southeast-2`, and use `http://localhost:3000` as the initial `FrontendOrigin`. Save the generated API URL from the stack Outputs.
+
+### Deploy the frontend
+
+The Next.js app is configured as a static export. Create an S3 bucket in `ap-southeast-2`, then build with the API URL produced by the backend stack:
+
+```powershell
+cd frontend
+npm ci
+$env:NEXT_PUBLIC_API_BASE = "https://YOUR_API_ID.execute-api.ap-southeast-2.amazonaws.com"
+npm run build
+aws s3 sync .\out s3://YOUR_BUCKET_NAME --delete
+```
+
+For a public HTTPS website, put the bucket behind an Amazon CloudFront distribution. For a learning deployment, use the CloudFront-provided domain and then redeploy the backend with that domain as `FrontendOrigin`:
+
+```powershell
+sam deploy --template-file .aws-sam\build\template.yaml --stack-name workday-regression-agent --capabilities CAPABILITY_IAM --parameter-overrides FrontendOrigin=https://YOUR_CLOUDFRONT_DOMAIN
+```
+
+The first deployment is intentionally small: no database, VPC, NAT Gateway, EC2 instance, or always-on container. Delete the CloudFormation stack and S3 bucket when you finish practicing so resources do not remain active.
+
+### Bedrock configuration
+
+The default model is `amazon.nova-lite-v1:0`. Bedrock model availability and inference-profile IDs can change, so confirm the exact model shown in the Bedrock console for `ap-southeast-2` before deployment. The Lambda role needs `bedrock:InvokeModel`; the SAM template grants the minimum Bedrock actions needed by the Converse call, with the resource left broad for the first learning deployment.
 
 ## Security notes
 

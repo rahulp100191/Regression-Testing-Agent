@@ -163,7 +163,7 @@ def validate_result(value: dict[str, Any], candidates: list[dict[str, Any]] | li
 
 async def ask_bedrock(release: dict[str, Any], candidates: list[dict[str, Any]]) -> dict[str, Any]:
     try:
-        client = boto3.client("bedrock-runtime", region_name=os.getenv("AWS_REGION", "ap-south-1"))
+        client = boto3.client("bedrock-runtime", region_name=os.getenv("AWS_REGION", "ap-southeast-2"))
     except Exception as exc:
         return fallback_result(f"Amazon Bedrock is not configured: {exc}", candidates)
     candidate_names = [candidate["e2e"] for candidate in candidates]
@@ -193,7 +193,7 @@ app.add_middleware(CORSMiddleware, allow_origins=[os.getenv("FRONTEND_ORIGIN", "
 
 @app.get("/api/health")
 async def health():
-    return {"status": "ok", "bedrock_region": os.getenv("AWS_REGION", "ap-south-1"), "bedrock_model": bedrock_model_id(), "review_threshold": review_threshold()}
+    return {"status": "ok", "bedrock_region": os.getenv("AWS_REGION", "ap-southeast-2"), "bedrock_model": bedrock_model_id(), "review_threshold": review_threshold()}
 
 
 @app.post("/api/preview")

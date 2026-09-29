@@ -1,0 +1,72 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: Workday Release Regression Agent API using FastAPI, Lambda, API Gateway, and Amazon Bedrock.
+
+Parameters:
+  FrontendOrigin:
+    Type: String
+    Default: http://localhost:3000
+    Description: Browser origin allowed to call the API. Update this after creating the frontend URL.
+  BedrockModelId:
+    Type: String
+    Default: amazon.nova-lite-v1:0
+    Description: Bedrock model ID available in ap-southeast-2.
+  ReviewThreshold:
+    Type: String
+    Default: '70'
+
+Globals:
+  Function:
+    Runtime: python3.12
+    Architectures:
+      - x86_64
+    MemorySize: 1024
+    Timeout: 120
+    Environment:
+      Variables:
+        BEDROCK_MODEL_ID: !Ref BedrockModelId
+        REVIEW_THRESHOLD: !Ref ReviewThreshold
+        FRONTEND_ORIGIN: !Ref FrontendOrigin
+
+Resources:
+  HttpApi:
+    Type: AWS::Serverless::HttpApi
+    Properties:
+      CorsConfiguration:
+        AllowOrigins:
+          - !Ref FrontendOrigin
+        AllowHeaders:
+          - content-type
+        AllowMethods:
+          - GET
+          - POST
+          - OPTIONS
+
+  RegressionApiFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: ../backend/
+      Handler: handler.handler
+      Policies:
+        - Statement:
+            - Sid: InvokeBedrockModel
+              Effect: Allow
+              Action:
+                - bedrock:InvokeModel
+                - bedrock:InvokeModelWithResponseStream
+              Resource: '*'
+      Events:
+        Proxy:
+          Type: HttpApi
+          Properties:
+            ApiId: !Ref HttpApi
+            Path: /{proxy+}
+            Method: ANY
+
+Outputs:
+  ApiUrl:
+    Description: API Gateway URL for the regression agent backend.
+    Value: !Sub https://${HttpApi}.execute-api.${AWS::Region}.${AWS::URLSuffix}
+  BedrockModel:
+    Description: Bedrock model used by the API.
+    Value: !Ref BedrockModelId
