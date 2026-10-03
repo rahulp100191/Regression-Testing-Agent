@@ -1,0 +1,118 @@
+{
+  "ui_http_status": 200,
+  "frontend_api_base": "http://localhost:8001",
+  "browser_visual_verification": "unavailable: Windows Application Control blocked agent-browser, and browser connector has no available browser",
+  "preview": {
+    "release": {
+      "sheet": "Whats New in Workday",
+      "sheets": [
+        "Whats New in Workday"
+      ],
+      "row_count": 65,
+      "headers": [
+        "What's New Item",
+        "Workday Release",
+        "Feature",
+        "Feature Description",
+        "Community Post",
+        "Functional Area(s)",
+        "Setup Effort",
+        "New Functionality Title",
+        "New Functionality",
+        "Training & Testing Impact",
+        "Tenant",
+        "Preview Date",
+        "Tentative Production Date",
+        "Production Date",
+        "Documentation Corrected",
+        "Documentation Corrected Date",
+        "Technical Changes",
+        "Current Name",
+        "Former Name",
+        "Retired",
+        "Adoption Item(s)"
+      ]
+    },
+    "e2e": {
+      "sheet": "Sheet1",
+      "sheets": [
+        "Sheet1"
+      ],
+      "row_count": 42,
+      "headers": [
+        "Item",
+        "Work-Stream",
+        "E2E"
+      ]
+    }
+  },
+  "single_note_analysis": {
+    "release_count": 1,
+    "e2e_count": 42,
+    "review_threshold": 70,
+    "results": [
+      {
+        "decision": "no_matching_e2e",
+        "business_process_name": null,
+        "e2e_name": null,
+        "confidence": 43,
+        "confidence_band": "low",
+        "reasoning": "The release note describes the introduction of an Android Kiosk app for recording time clock events. The candidate E2E catalog contains high-level business processes (e.g., Time to Pay, Hire to Pay) but does not include a specific E2E for kiosk-based time entry or device-specific interface testing. The update is a platform-specific enhancement for time entry rather than a change to the end-to-end business process logic.",
+        "evidence": [
+          "Android kiosks can record time",
+          "Users enter their IDs to check-in and check-out",
+          "Time clock events are sent to Workday"
+        ],
+        "review_required": true,
+        "evaluation": {
+          "model_confidence": 95,
+          "lexical_relevance": 0,
+          "candidate_rank": null,
+          "candidate_margin": 0.3112,
+          "evidence_grounding": 100,
+          "selection_agreement": 0
+        },
+        "raw_prediction": {
+          "decision": "no_matching_e2e",
+          "business_process_name": null,
+          "e2e_name": null,
+          "confidence": 95,
+          "confidence_band": "High",
+          "reasoning": "The release note describes the introduction of an Android Kiosk app for recording time clock events. The candidate E2E catalog contains high-level business processes (e.g., Time to Pay, Hire to Pay) but does not include a specific E2E for kiosk-based time entry or device-specific interface testing. The update is a platform-specific enhancement for time entry rather than a change to the end-to-end business process logic.",
+          "evidence": [
+            "Android kiosks can record time",
+            "Users enter their IDs to check-in and check-out",
+            "Time clock events are sent to Workday"
+          ],
+          "review_required": true
+        },
+        "model_error": null,
+        "source_row": 2,
+        "release": {
+          "functional_area": "System Time Tracking Time Tracking Calculations",
+          "product_line": "",
+          "product_area": "",
+          "using_workday": "",
+          "title": "Workday Time Kiosk Android Support",
+          "description": "We now deliver the Workday Time Kiosk app that Time Tracking customers can enable workers to check in and out on an Android kiosk. Note: This update is only available on Android tablets and doesn't extend to Android mobile phones. This provides a unified and intuitive time tracking experience for organizations that primarily use Android and ensures a consistent user experience.",
+          "business_benefits": "",
+          "changes": "With this update: • Android kiosks can record time. • Users enter their IDs to check-in and check-out. • Time clock events are sent to Workday.",
+          "impact": "",
+          "release_number": "Workday 2025 Release 1",
+          "release_note_url": "https://doc.workday.com/release-notes/en-us/mob/9053539.html",
+          "source_row": 2
+        },
+        "shortlisted_candidates": [
+          "TT_001 - Time to Pay (Reported, Elapsed and Exception)",
+          "HCM_002 - Personal Elements Change (ESS)",
+          "HCM_001 - Personal Elements Change (HR)",
+          "HCM_003 - Change Contact Information",
+          "HCM_007 - Contract Contingent Worker",
+          "HCM_004 - Hire to Pay",
+          "HCM_005 - Rehire to Pay",
+          "HCM_006 - Convert to Employee (Impact on Pay)"
+        ]
+      }
+    ]
+  }
+}

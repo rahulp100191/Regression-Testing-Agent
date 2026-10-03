@@ -1,0 +1,11 @@
+.env
+**/.env*
+.git
+**/node_modules
+**/.next
+**/__pycache__
+**/.pytest_cache
+**/.venv
+**/venv
+*.xlsx
+outputs/eval_*

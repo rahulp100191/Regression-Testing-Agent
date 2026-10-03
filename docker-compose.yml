@@ -1,0 +1,102 @@
+services:
+  trace-storage-init:
+    image: alpine/ollama@sha256:27f6414e9db165f5f99264f36eb041e2f54070c240e3e2f2653c9ec6d802f326
+    user: "0:0"
+    entrypoint: ["chown", "-R", "10001:10001", "/data"]
+    volumes:
+      - trace-data:/data
+  jaeger:
+    image: cr.jaegertracing.io/jaegertracing/jaeger:2.21.0
+    command: ["--config", "/etc/jaeger/config.yml"]
+    volumes:
+      - ./observability/jaeger.yml:/etc/jaeger/config.yml:ro
+      - trace-data:/data
+    ports: ["127.0.0.1:16686:16686"]
+    restart: unless-stopped
+    depends_on:
+      trace-storage-init:
+        condition: service_completed_successfully
+  ollama:
+    image: alpine/ollama@sha256:27f6414e9db165f5f99264f36eb041e2f54070c240e3e2f2653c9ec6d802f326
+    volumes:
+      - ollama-models:/root/.ollama
+    environment:
+      OLLAMA_KEEP_ALIVE: 5m
+      OLLAMA_MAX_LOADED_MODELS: 1
+      OLLAMA_NUM_PARALLEL: 1
+    restart: unless-stopped
+  ollama-init:
+    image: alpine/ollama@sha256:27f6414e9db165f5f99264f36eb041e2f54070c240e3e2f2653c9ec6d802f326
+    profiles: [setup]
+    restart: on-failure:3
+    entrypoint: ["/bin/sh", "/scripts/pull-models.sh"]
+    environment:
+      OLLAMA_HOST: http://ollama:11434
+    volumes:
+      - ./scripts/pull-models.sh:/scripts/pull-models.sh:ro
+    depends_on: [ollama]
+  postgres:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_DB: regression
+      POSTGRES_USER: regression
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env}
+    volumes:
+      - regression-db:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U regression -d regression"]
+      interval: 5s
+      retries: 10
+  api:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    env_file: .env
+    environment:
+      PGHOST: postgres
+      PGDATABASE: regression
+      PGUSER: regression
+      PGPASSWORD: ${POSTGRES_PASSWORD}
+      OTEL_SERVICE_NAME: regression-api
+      OTEL_EXPORTER_OTLP_ENDPOINT: http://jaeger:4318
+      APP_LOG_DIR: /var/log/regression
+      OLLAMA_BASE_URL: http://ollama:11434
+      LLM_FALLBACK_MODELS: ${LLM_FALLBACK_MODELS:-ollama/qwen3:0.6b,ollama/qwen2.5:0.5b}
+    volumes:
+      - app-logs:/var/log/regression
+    ports: ["127.0.0.1:8000:8000"]
+    depends_on:
+      postgres:
+        condition: service_healthy
+  regression-test:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    command: ["python", "eval_worker.py"]
+    env_file: .env
+    environment:
+      PGHOST: postgres
+      PGDATABASE: regression
+      PGUSER: regression
+      PGPASSWORD: ${POSTGRES_PASSWORD}
+      OTEL_SERVICE_NAME: regression-worker
+      OTEL_EXPORTER_OTLP_ENDPOINT: http://jaeger:4318
+      APP_LOG_DIR: /var/log/regression
+      OLLAMA_BASE_URL: http://ollama:11434
+      LLM_FALLBACK_MODELS: ${LLM_FALLBACK_MODELS:-ollama/qwen3:0.6b,ollama/qwen2.5:0.5b}
+    volumes:
+      - app-logs:/var/log/regression
+    depends_on:
+      postgres:
+        condition: service_healthy
+  frontend:
+    build:
+      context: .
+      dockerfile: frontend/Dockerfile
+    ports: ["127.0.0.1:3000:80"]
+    depends_on: [api]
+volumes:
+  regression-db:
+  trace-data:
+  ollama-models:
+  app-logs:

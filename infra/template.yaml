@@ -24,6 +24,7 @@ Globals:
     Timeout: 120
     Environment:
       Variables:
+        LLM_PROVIDER: bedrock
         BEDROCK_MODEL_ID: !Ref BedrockModelId
         REVIEW_THRESHOLD: !Ref ReviewThreshold
         FRONTEND_ORIGIN: !Ref FrontendOrigin
@@ -54,6 +55,7 @@ Resources:
               Action:
                 - bedrock:InvokeModel
                 - bedrock:InvokeModelWithResponseStream
+                - bedrock:ApplyGuardrail
               Resource: '*'
       Events:
         Proxy:

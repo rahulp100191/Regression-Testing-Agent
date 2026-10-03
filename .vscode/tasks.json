@@ -1,0 +1,39 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Prepare local fallback models",
+      "type": "process",
+      "command": "docker",
+      "args": ["compose", "up", "-d", "ollama", "ollama-init"],
+      "options": { "cwd": "${workspaceFolder}" },
+      "problemMatcher": []
+    },
+    {
+      "label": "Start debug stack",
+      "dependsOn": ["Prepare local fallback models"],
+      "type": "process",
+      "command": "docker",
+      "args": ["compose", "-f", "docker-compose.yml", "-f", "docker-compose.debug.yml", "up", "--build", "-d", "--wait"],
+      "options": { "cwd": "${workspaceFolder}" },
+      "problemMatcher": []
+    },
+    {
+      "label": "Run app (Docker)",
+      "dependsOn": ["Prepare local fallback models"],
+      "type": "process",
+      "command": "docker",
+      "args": ["compose", "up", "--build", "-d", "--wait"],
+      "options": { "cwd": "${workspaceFolder}" },
+      "problemMatcher": []
+    },
+    {
+      "label": "Stop app containers",
+      "type": "process",
+      "command": "docker",
+      "args": ["compose", "--profile", "setup", "-f", "docker-compose.yml", "-f", "docker-compose.debug.yml", "stop"],
+      "options": { "cwd": "${workspaceFolder}" },
+      "problemMatcher": []
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "rows": 5,
+  "elapsed_seconds": 19.73,
+  "batch_count": 1,
+  "provider_attempts": 1,
+  "attempt_errors": [],
+  "actual_provider": "gemma",
+  "actual_model": "gemma-4-26b-a4b-it",
+  "input_tokens": 4369,
+  "output_tokens": 838,
+  "thinking_tokens": null,
+  "model_errors": 0,
+  "output_blocks": 0,
+  "observations": [
+    {
+      "finish_reason": "STOP",
+      "usage": {
+        "promptTokenCount": 4369,
+        "candidatesTokenCount": 838,
+        "totalTokenCount": 5207,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 4369
+          }
+        ],
+        "serviceTier": "standard"
+      }
+    }
+  ],
+  "decisions": {
+    "2": "no_matching_e2e",
+    "3": "unable_to_identify",
+    "4": "no_matching_e2e",
+    "5": "no_matching_e2e",
+    "6": "no_matching_e2e"
+  }
+}

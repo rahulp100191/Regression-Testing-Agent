@@ -1,0 +1,44 @@
+{
+  "dataset_sha256": "85a3cc6f76dde2cb1082f9889f5434582cdbe6c15cbb6d87c014b459b6833d51",
+  "provider": "gemma",
+  "model": "gemma-4-26b-a4b-it",
+  "k": 8,
+  "predictions": [
+    {
+      "case_id": "WD2025-MAP-002",
+      "shortlist": [
+        "TAL_005 - Talent Elements (Succession Pool, Talent Pool and Career Profile)",
+        "ABS_001 - Leave Processing (Paid and Unpaid)",
+        "PAY_002 - Process On Demand Payment",
+        "ABS_002 - Return from Leave (Paid and Unpaid)",
+        "TAL_002 - Manage Succession Plan",
+        "HCM_003 - Change Contact Information",
+        "Create Credit Card",
+        "LRN_001 - Create and Edit a Course, Program, Lesson, and Topic"
+      ],
+      "result": {
+        "decision": "unable_to_identify",
+        "business_process_name": null,
+        "e2e_name": null,
+        "confidence": 0,
+        "confidence_band": "low",
+        "reasoning": "Model endpoint returned HTTP 500. Check model access, key and quota.",
+        "evidence": [],
+        "review_required": true,
+        "shortlisted_candidates": [
+          "TAL_005 - Talent Elements (Succession Pool, Talent Pool and Career Profile)",
+          "ABS_001 - Leave Processing (Paid and Unpaid)",
+          "PAY_002 - Process On Demand Payment",
+          "ABS_002 - Return from Leave (Paid and Unpaid)",
+          "TAL_002 - Manage Succession Plan",
+          "HCM_003 - Change Contact Information",
+          "Create Credit Card",
+          "LRN_001 - Create and Edit a Course, Program, Lesson, and Topic"
+        ],
+        "raw_prediction": null,
+        "model_error": "Model endpoint returned HTTP 500. Check model access, key and quota."
+      },
+      "prompt_sha256": "a76b3fb88da8da394d6331578379331becc4a993d1b753102d787d78b2a43883"
+    }
+  ]
+}

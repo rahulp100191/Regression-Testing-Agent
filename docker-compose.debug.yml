@@ -1,0 +1,23 @@
+services:
+  api:
+    command: ["python", "-Xfrozen_modules=off", "-m", "debugpy", "--listen", "0.0.0.0:5678", "-m", "uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8000"]
+    ports: ["127.0.0.1:5678:5678"]
+    volumes:
+      - ./backend:/workspace/backend:ro
+      - ./prompts:/workspace/prompts:ro
+  regression-test:
+    command: ["python", "-Xfrozen_modules=off", "-m", "debugpy", "--listen", "0.0.0.0:5679", "eval_worker.py"]
+    ports: ["127.0.0.1:5679:5679"]
+    volumes:
+      - ./backend:/workspace/backend:ro
+      - ./prompts:/workspace/prompts:ro
+  frontend:
+    build:
+      context: .
+      dockerfile: frontend/Dockerfile.dev
+    command: ["npm", "run", "dev", "--", "--hostname", "0.0.0.0", "--port", "80"]
+    environment:
+      NEXT_PUBLIC_API_BASE: http://127.0.0.1:8000
+    volumes:
+      - ./frontend/app:/app/app:ro
+      - ./frontend/next.config.ts:/app/next.config.ts:ro

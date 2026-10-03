@@ -2,6 +2,8 @@
 
 An explainable regression-test triage tool for Workday releases. Upload a release-notes workbook and an E2E test catalog; the app ranks likely candidates, asks Amazon Bedrock to make a grounded selection, calculates confidence signals, and flags uncertain matches for human review.
 
+Local inference now supports Gemma through `.env` and fully local Ollama. AWS continues to use Bedrock. See [local setup and offline evaluation](EVALUATION.md) for the nine evaluation metrics, formulas, reports and disconnected prediction replay.
+
 ![Workflow](https://img.shields.io/badge/workflow-upload%20%E2%86%92%20shortlist%20%E2%86%92%20review-1f6feb)
 ![Backend](https://img.shields.io/badge/backend-FastAPI-009688)
 ![Frontend](https://img.shields.io/badge/frontend-Next.js-black)
@@ -11,9 +13,10 @@ An explainable regression-test triage tool for Workday releases. Upload a releas
 - Validates both `.xlsx` uploads and reports their sheet/row counts before analysis.
 - Reads the first non-empty worksheet and maps release-note fields to the E2E catalog.
 - Uses deterministic lexical, fuzzy-title, product-area, and work-stream signals to shortlist candidates.
-- Uses Amazon Bedrock only to choose from the shortlist; it cannot invent an E2E catalog value.
+- Uses the configured Gemma, Ollama or Bedrock provider to choose from the shortlist. Validation rejects invented selections, and evaluation preserves raw responses to measure attempted hallucinations.
 - Returns evidence, reasoning, confidence bands, evaluation signals, and an explicit review flag for every release row.
-- Exports the result table as CSV. Uploaded files and results are kept in memory for the current session only.
+- Exports the result table as CSV. Analysis rows, catalog snapshots, predictions, user feedback and reviewed golden cases are persisted in PostgreSQL.
+- Screens input/output for malicious instructions and unsafe content; supports a managed Bedrock Guardrail classifier. See [safety and production feedback](PRODUCTION_FEEDBACK.md) for configuration and deployment limitations.
 
 ## Architecture
 
@@ -154,3 +157,6 @@ Do not commit `.env`, API keys, customer workbooks, or other sensitive release d
 ## License
 
 MIT — see [LICENSE](LICENSE).
+# UI-triggered offline evaluation
+
+See [Docker evaluation setup](DOCKER_EVALUATION.md) for the PostgreSQL-backed run history, dedicated regression-test worker, versioned prompts, and evaluation report UI. Evaluations run only when explicitly queued with the UI button or API.

@@ -1,0 +1,3130 @@
+{
+  "dataset_sha256": "85a3cc6f76dde2cb1082f9889f5434582cdbe6c15cbb6d87c014b459b6833d51",
+  "provider": "gemma",
+  "model": "gemma-4-26b-a4b-it",
+  "k": 8,
+  "predictions": [
+    {
+      "case_id": "WD2025-MAP-002",
+      "shortlist": [
+        "TAL_005 - Talent Elements (Succession Pool, Talent Pool and Career Profile)",
+        "ABS_001 - Leave Processing (Paid and Unpaid)",
+        "PAY_002 - Process On Demand Payment",
+        "ABS_002 - Return from Leave (Paid and Unpaid)",
+        "TAL_002 - Manage Succession Plan",
+        "HCM_003 - Change Contact Information",
+        "Create Credit Card",
+        "LRN_001 - Create and Edit a Course, Program, Lesson, and Topic"
+      ],
+      "result": {
+        "decision": "no_matching_e2e",
+        "business_process_name": null,
+        "e2e_name": null,
+        "confidence": 45,
+        "confidence_band": "low",
+        "reasoning": "The release note describes a global UI/UX accessibility enhancement for table editing functionality (Add Row, Remove Row, Select Row) across the Workday platform. The candidate list consists of specific functional business processes (Talent, Leave, Payroll, etc.), none of which are the specific subject of this general accessibility update. The feature is a platform-wide UI improvement rather than a specific business process change.",
+        "evidence": [
+          "Enhanced Accessibility for Table Editing and Row Actions",
+          "enhancing the accessibility of edit tables across Workday",
+          "apply to tables where you can add, remove, or select rows"
+        ],
+        "review_required": true,
+        "evaluation": {
+          "model_confidence": 100,
+          "lexical_relevance": 0,
+          "candidate_rank": null,
+          "candidate_margin": 0.0043,
+          "evidence_grounding": 100,
+          "selection_agreement": 0
+        },
+        "raw_prediction": {
+          "decision": "no_matching_e2e",
+          "business_process_name": null,
+          "e2e_name": null,
+          "confidence": 100,
+          "confidence_band": "High",
+          "reasoning": "The release note describes a global UI/UX accessibility enhancement for table editing functionality (Add Row, Remove Row, Select Row) across the Workday platform. The candidate list consists of specific functional business processes (Talent, Leave, Payroll, etc.), none of which are the specific subject of this general accessibility update. The feature is a platform-wide UI improvement rather than a specific business process change.",
+          "evidence": [
+            "Enhanced Accessibility for Table Editing and Row Actions",
+            "enhancing the accessibility of edit tables across Workday",
+            "apply to tables where you can add, remove, or select rows"
+          ],
+          "review_required": true
+        },
+        "model_error": null
+      },
+      "prompt_sha256": "a76b3fb88da8da394d6331578379331becc4a993d1b753102d787d78b2a43883"
+    },
+    {
+      "case_id": "WD2025-MAP-003",
+      "shortlist": [
+        "HCM_001 - Personal Elements Change (HR)",
+        "HCM_002 - Personal Elements Change (ESS)",
+        "HCM_006 - Convert to Employee (Impact on Pay)",
+        "HCM_009 - Termination to Pay",
+        "HCM_003 - Change Contact Information",
+        "HCM_007 - Contract Contingent Worker",
+        "HCM_008 - Change Job to Pay",
+        "HCM_004 - Hire to Pay"
+      ],
+      "result": {
+        "decision": "no_matching_e2e",
+        "business_process_name": null,
+        "e2e_name": null,
+        "confidence": 45,
+        "confidence_band": "low",
+        "reasoning": "The release note describes an update to industry benchmarks within the Peakon Employee Voice module. The candidate E2E catalog consists exclusively of core HCM transactional processes (such as hiring, termination, and personal element changes) and does not contain any test cases related to Peakon or employee engagement benchmarking.",
+        "evidence": [
+          "Peakon Benchmarks",
+          "update industry benchmarks on Workday Peakon Employee Voice"
+        ],
+        "review_required": true,
+        "evaluation": {
+          "model_confidence": 100,
+          "lexical_relevance": 0,
+          "candidate_rank": null,
+          "candidate_margin": 0.0014,
+          "evidence_grounding": 100,
+          "selection_agreement": 0
+        },
+        "raw_prediction": {
+          "decision": "no_matching_e2e",
+          "business_process_name": null,
+          "e2e_name": null,
+          "confidence": 100,
+          "confidence_band": "High",
+          "reasoning": "The release note describes an update to industry benchmarks within the Peakon Employee Voice module. The candidate E2E catalog consists exclusively of core HCM transactional processes (such as hiring, termination, and personal element changes) and does not contain any test cases related to Peakon or employee engagement benchmarking.",
+          "evidence": [
+            "Peakon Benchmarks",
+            "update industry benchmarks on Workday Peakon Employee Voice"
+          ],
+          "review_required": false
+        },
+        "model_error": null
+      },
+      "prompt_sha256": "36fa93ced15384eda53c2c2b4f08aa2929b10094ef86bd547c8f4d962e399408"
+    },
+    {
+      "case_id": "WD2025-MAP-004",
+      "shortlist": [
+        "HCM_001 - Personal Elements Change (HR)",
+        "HCM_002 - Personal Elements Change (ESS)",
+        "HCM_003 - Change Contact Information",
+        "HCM_009 - Termination to Pay",
+        "HCM_005 - Rehire to Pay",
+        "HCM_006 - Convert to Employee (Impact on Pay)",
+        "HCM_008 - Change Job to Pay",
+        "TT_001 - Time to Pay (Reported, Elapsed and Exception)"
+      ],
+      "result": {
+        "decision": "no_matching_e2e",
+        "business_process_name": null,
+        "e2e_name": null,
+        "confidence": 45,
+        "confidence_band": "low",
+        "reasoning": "The release note describes a UI enhancement for filtering comments within the Peakon Employee Voice module. The candidate E2E test cases are focused on HCM core lifecycle processes (Personal Elements, Termination, Rehire, Job Changes) and Time Tracking, which do not cover engagement or sentiment analysis tools.",
+        "evidence": [
+          "Response Score Filter for Comments",
+          "filter comments by response score directly on the Comments page",
+          "Peakon Employee Voice"
+        ],
+        "review_required": true,
+        "evaluation": {
+          "model_confidence": 100,
+          "lexical_relevance": 0,
+          "candidate_rank": null,
+          "candidate_margin": 0.0008,
+          "evidence_grounding": 100,
+          "selection_agreement": 0
+        },
+        "raw_prediction": {
+          "decision": "no_matching_e2e",
+          "business_process_name": null,
+          "e2e_name": null,
+          "confidence": 100,
+          "confidence_band": "High",
+          "reasoning": "The release note describes a UI enhancement for filtering comments within the Peakon Employee Voice module. The candidate E2E test cases are focused on HCM core lifecycle processes (Personal Elements, Termination, Rehire, Job Changes) and Time Tracking, which do not cover engagement or sentiment analysis tools.",
+          "evidence": [
+            "Response Score Filter for Comments",
+            "filter comments by response score directly on the Comments page",
+            "Peakon Employee Voice"
+          ],
+          "review_required": false
+        },
+        "model_error": null
+      },
+      "prompt_sha256": "085db1138b88355aa985a095af7725afc7a8322da2230efa9ba59d756b75ca1f"
+    },
+    {
+      "case_id": "WD2025-MAP-005",
+      "shortlist": [
+        "HCM_006 - Convert to Employee (Impact on Pay)",
+        "HCM_003 - Change Contact Information",
+        "TT_001 - Time to Pay (Reported, Elapsed and Exception)",
+        "REC_001 - Create to Close (Job Requisition)",
+        "HCM_009 - Termination to Pay",
+        "HCM_008 - Change Job to Pay",
+        "HCM_004 - Hire to Pay",
+        "HCM_005 - Rehire to Pay"
+      ],
+      "result": {
+        "decision": "no_matching_e2e",
+        "business_process_name": null,
+        "e2e_name": null,
+        "confidence": 45,
+        "confidence_band": "low",
+        "reasoning": "The release note describes configuration updates to the 'HCM Machine Learning GA Features' innovation service and the 'Workday Connector for Equifax Verification', including service renaming and task setting changes. The candidate E2E catalog consists of worker lifecycle processes (e.g., Hire to Pay, Termination to Pay, Change Job to Pay), which do not match the scope of these service-level configuration and innovation service updates.",
+        "evidence": [
+          "Workday Connector for Equifax Verification",
+          "HCM Machine Learning GA Features",
+          "rename the HCM Machine Learning GA Features innovation service",
+          "Set Up Workday Connector for Equifax Verification task"
+        ],
+        "review_required": true,
+        "evaluation": {
+          "model_confidence": 100,
+          "lexical_relevance": 0,
+          "candidate_rank": null,
+          "candidate_margin": 0.0102,
+          "evidence_grounding": 100,
+          "selection_agreement": 0
+        },
+        "raw_prediction": {
+          "decision": "no_matching_e2e",
+          "business_process_name": null,
+          "e2e_name": null,
+          "confidence": 100,
+          "confidence_band": "High",
+          "reasoning": "The release note describes configuration updates to the 'HCM Machine Learning GA Features' innovation service and the 'Workday Connector for Equifax Verification', including service renaming and task setting changes. The candidate E2E catalog consists of worker lifecycle processes (e.g., Hire to Pay, Termination to Pay, Change Job to Pay), which do not match the scope of these service-level configuration and innovation service updates.",
+          "evidence": [
+            "Workday Connector for Equifax Verification",
+            "HCM Machine Learning GA Features",
+            "rename the HCM Machine Learning GA Features innovation service",
+            "Set Up Workday Connector for Equifax Verification task"
+          ],
+          "review_required": true
+        },
+        "model_error": null
+      },
+      "prompt_sha256": "31d511906c461c0bd812376e1d8be14368360a6ac91c06c7d0948dfff863fa88"
+    },
+    {
+      "case_id": "WD2025-MAP-007",
+      "shortlist": [
+        "HCM_006 - Convert to Employee (Impact on Pay)",
+        "HCM_001 - Personal Elements Change (HR)",
+        "HCM_002 - Personal Elements Change (ESS)",
+        "HCM_003 - Change Contact Information",
+        "HCM_007 - Contract Contingent Worker",
+        "HCM_004 - Hire to Pay",
+        "HCM_008 - Change Job to Pay",
+        "HCM_009 - Termination to Pay"
+      ],
+      "result": {
+        "decision": "no_matching_e2e",
+        "business_process_name": null,
+        "e2e_name": null,
+        "confidence": 45,
+        "confidence_band": "low",
+        "reasoning": "The release note describes a configuration update for Peakon Employee Voice regarding survey score visualization modes. The candidate E2E catalog is strictly limited to HCM core lifecycle processes (Hire, Terminate, Change Job, etc.) and does not contain any testing scenarios related to Peakon or survey analytics.",
+        "evidence": [
+          "Percent Favorable Score Mode",
+          "set percent favorable as the default score view in Peakon",
+          "Administrators can apply 2 new different modes across all manager dashboards"
+        ],
+        "review_required": true,
+        "evaluation": {
+          "model_confidence": 100,
+          "lexical_relevance": 0,
+          "candidate_rank": null,
+          "candidate_margin": 0.0013,
+          "evidence_grounding": 100,
+          "selection_agreement": 0
+        },
+        "raw_prediction": {
+          "decision": "no_matching_e2e",
+          "business_process_name": null,
+          "e2e_name": null,
+          "confidence": 100,
+          "confidence_band": "High",
+          "reasoning": "The release note describes a configuration update for Peakon Employee Voice regarding survey score visualization modes. The candidate E2E catalog is strictly limited to HCM core lifecycle processes (Hire, Terminate, Change Job, etc.) and does not contain any testing scenarios related to Peakon or survey analytics.",
+          "evidence": [
+            "Percent Favorable Score Mode",
+            "set percent favorable as the default score view in Peakon",
+            "Administrators can apply 2 new different modes across all manager dashboards"
+          ],
+          "review_required": false
+        },
+        "model_error": null
+      },
+      "prompt_sha256": "c8f52b142f8fd435cd061fbdc664e585660e705d82fb15fbcf9ec7c9d4aa9d48"
+    },
+    {
+      "case_id": "WD2025-MAP-008",
+      "shortlist": [
+        "HCM_001 - Personal Elements Change (HR)",
+        "HCM_006 - Convert to Employee (Impact on Pay)",
+        "HCM_002 - Personal Elements Change (ESS)",
+        "HCM_009 - Termination to Pay",
+        "HCM_007 - Contract Contingent Worker",
+        "HCM_003 - Change Contact Information",
+        "HCM_008 - Change Job to Pay",
+        "HCM_004 - Hire to Pay"
+      ],
+      "result": {
+        "decision": "no_matching_e2e",
+        "business_process_name": null,
+        "e2e_name": null,
+        "confidence": 45,
+        "confidence_band": "low",
+        "reasoning": "The release note describes cosmetic UI/UX enhancements involving illustrations on survey error pages and landing pages within Peakon Employee Voice. The candidate E2E catalog contains HCM core business processes (Hire, Termination, Personal Elements Change) which do not cover survey functionality or Peakon UI updates.",
+        "evidence": [
+          "Survey Illustrations Enhancements",
+          "update the illustrations on survey error pages",
+          "Workday Peakon"
+        ],
+        "review_required": true,
+        "evaluation": {
+          "model_confidence": 100,
+          "lexical_relevance": 0,
+          "candidate_rank": null,
+          "candidate_margin": 0.0005,
+          "evidence_grounding": 100,
+          "selection_agreement": 0
+        },
+        "raw_prediction": {
+          "decision": "no_matching_e2e",
+          "business_process_name": null,
+          "e2e_name": null,
+          "confidence": 100,
+          "confidence_band": "High",
+          "reasoning": "The release note describes cosmetic UI/UX enhancements involving illustrations on survey error pages and landing pages within Peakon Employee Voice. The candidate E2E catalog contains HCM core business processes (Hire, Termination, Personal Elements Change) which do not cover survey functionality or Peakon UI updates.",
+          "evidence": [
+            "Survey Illustrations Enhancements",
+            "update the illustrations on survey error pages",
+            "Workday Peakon"
+          ],
+          "review_required": false
+        },
+        "model_error": null
+      },
+      "prompt_sha256": "055bf2cbd67505128a065d386644cf5142034b2d0fc4a94b3b309384f13246de"
+    },
+    {
+      "case_id": "WD2025-MAP-009",
+      "shortlist": [
+        "HCM_001 - Personal Elements Change (HR)",
+        "HCM_002 - Personal Elements Change (ESS)",
+        "HCM_008 - Change Job to Pay",
+        "HCM_003 - Change Contact Information",
+        "HCM_006 - Convert to Employee (Impact on Pay)",
+        "HCM_007 - Contract Contingent Worker",
+        "HCM_009 - Termination to Pay",
+        "HCM_004 - Hire to Pay"
+      ],
+      "result": {
+        "decision": "no_matching_e2e",
+        "business_process_name": null,
+        "e2e_name": null,
+        "confidence": 45,
+        "confidence_band": "low",
+        "reasoning": "The release note describes UI enhancements for the Attributes page within the Peakon Employee Voice functional area. The candidate E2E catalog consists exclusively of core HCM business processes (Hire, Termination, Change Job, etc.) and does not include any testing scenarios related to Peakon or survey attribute configuration.",
+        "evidence": [
+          "Attributes UI Enhancements",
+          "Peakon Employee Voice",
+          "Attributes page"
+        ],
+        "review_required": true,
+        "evaluation": {
+          "model_confidence": 100,
+          "lexical_relevance": 0,
+          "candidate_rank": null,
+          "candidate_margin": 0.0009,
+          "evidence_grounding": 100,
+          "selection_agreement": 0
+        },
+        "raw_prediction": {
+          "decision": "no_matching_e2e",
+          "business_process_name": null,
+          "e2e_name": null,
+          "confidence": 100,
+          "confidence_band": "High",
+          "reasoning": "The release note describes UI enhancements for the Attributes page within the Peakon Employee Voice functional area. The candidate E2E catalog consists exclusively of core HCM business processes (Hire, Termination, Change Job, etc.) and does not include any testing scenarios related to Peakon or survey attribute configuration.",
+          "evidence": [
+            "Attributes UI Enhancements",
+            "Peakon Employee Voice",
+            "Attributes page"
+          ],
+          "review_required": false
+        },
+        "model_error": null
+      },
+      "prompt_sha256": "f412045002d4027ad52c6890e62aec6a9fab086256cf947549d2d71211f1bf6a"
+    },
+    {
+      "case_id": "WD2025-MAP-010",
+      "shortlist": [
+        "HCM_002 - Personal Elements Change (ESS)",
+        "HCM_001 - Personal Elements Change (HR)",
+        "HCM_003 - Change Contact Information",
+        "HCM_006 - Convert to Employee (Impact on Pay)",
+        "HCM_007 - Contract Contingent Worker",
+        "HCM_004 - Hire to Pay",
+        "HCM_005 - Rehire to Pay",
+        "HCM_008 - Change Job to Pay"
+      ],
+      "result": {
+        "decision": "no_matching_e2e",
+        "business_process_name": null,
+        "e2e_name": null,
+        "confidence": 43,
+        "confidence_band": "low",
+        "reasoning": "The release note describes a configuration capability to customize field labels (specifically Furigana names) via the 'Maintain Custom Labels' task. The candidate E2E test cases are focused on transactional business processes such as hiring, rehiring, and changing personal elements or jobs, rather than the configuration or maintenance of system labels.",
+        "evidence": [
+          "Custom Label for Furigana Family Name and Given Name",
+          "replace some default or delivered Workday labels with their custom labels",
+          "Maintain Custom Labels task"
+        ],
+        "review_required": true,
+        "evaluation": {
+          "model_confidence": 95,
+          "lexical_relevance": 0,
+          "candidate_rank": null,
+          "candidate_margin": 0.0035,
+          "evidence_grounding": 100,
+          "selection_agreement": 0
+        },
+        "raw_prediction": {
+          "decision": "no_matching_e2e",
+          "business_process_name": null,
+          "e2e_name": null,
+          "confidence": 95,
+          "confidence_band": "High",
+          "reasoning": "The release note describes a configuration capability to customize field labels (specifically Furigana names) via the 'Maintain Custom Labels' task. The candidate E2E test cases are focused on transactional business processes such as hiring, rehiring, and changing personal elements or jobs, rather than the configuration or maintenance of system labels.",
+          "evidence": [
+            "Custom Label for Furigana Family Name and Given Name",
+            "replace some default or delivered Workday labels with their custom labels",
+            "Maintain Custom Labels task"
+          ],
+          "review_required": true
+        },
+        "model_error": null
+      },
+      "prompt_sha256": "82b92372f0fc3629ad480f7356e5bac8689ec09026f795ac7ecdbf293c2d8526"
+    },
+    {
+      "case_id": "WD2025-MAP-006",
+      "shortlist": [
+        "PAY_001 - Pay Input to Settlement",
+        "PAY_005 - Tax Elections - Federal, State and Local",
+        "PAY_002 - Process On Demand Payment",
+        "PAY_004 - Payment Elections (Regular and Bonus)",
+        "PAY_003 - Address Change to Taxes",
+        "COMP_002 - Compensation Change to Pay (Retro)",
+        "COMP_001 - Compensation Change to Pay",
+        "COMP_003 - Reward to Pay (One-Time Payment)"
+      ],
+      "result": {
+        "decision": "no_matching_e2e",
+        "business_process_name": null,
+        "e2e_name": null,
+        "confidence": 45,
+        "confidence_band": "low",
+        "reasoning": "The release note describes a validation rule within the 'Edit Period Schedule' task to prevent the deletion of periods that have commitment results associated with them. The candidate E2E tests focus on payroll processing flows (input to settlement, on-demand payments), tax elections, and compensation changes, but none cover period schedule configuration or the specific restriction on deleting periods.",
+        "evidence": [
+          "Prevent Deletion of Periods with Commitment Results",
+          "add restrictions around deleting periods that have commitment results associated with them",
+          "Edit Period Schedule task"
+        ],
+        "review_required": true,
+        "evaluation": {
+          "model_confidence": 100,
+          "lexical_relevance": 0,
+          "candidate_rank": null,
+          "candidate_margin": 0.0009,
+          "evidence_grounding": 100,
+          "selection_agreement": 0
+        },
+        "raw_prediction": {
+          "decision": "no_matching_e2e",
+          "business_process_name": null,
+          "e2e_name": null,
+          "confidence": 100,
+          "confidence_band": "High",
+          "reasoning": "The release note describes a validation rule within the 'Edit Period Schedule' task to prevent the deletion of periods that have commitment results associated with them. The candidate E2E tests focus on payroll processing flows (input to settlement, on-demand payments), tax elections, and compensation changes, but none cover period schedule configuration or the specific restriction on deleting periods.",
+          "evidence": [
+            "Prevent Deletion of Periods with Commitment Results",
+            "add restrictions around deleting periods that have commitment results associated with them",
+            "Edit Period Schedule task"
+          ],
+          "review_required": false
+        },
+        "model_error": null
+      },
+      "prompt_sha256": "6dada508d002d05ceb8705aa81c6d820f93fae342db1f6d4e968a57c3b1d891e"
+    },
+    {
+      "case_id": "WD2025-MAP-011",
+      "shortlist": [
+        "PAY_005 - Tax Elections - Federal, State and Local",
+        "PAY_001 - Pay Input to Settlement",
+        "PAY_004 - Payment Elections (Regular and Bonus)",
+        "PAY_003 - Address Change to Taxes",
+        "PAY_002 - Process On Demand Payment",
+        "COMP_003 - Reward to Pay (One-Time Payment)",
+        "COMP_001 - Compensation Change to Pay",
+        "COMP_002 - Compensation Change to Pay (Retro)"
+      ],
+      "result": {
+        "decision": "no_matching_e2e",
+        "business_process_name": null,
+        "e2e_name": null,
+        "confidence": 45,
+        "confidence_band": "low",
+        "reasoning": "The release note describes updates to the 'ADP Tax Filing - Quarterly tax filing integration' to meet specific ADP and government requirements. The candidate E2E catalog contains payroll and compensation processes (such as Tax Elections, Pay Input, and Compensation Changes) but does not include any test cases for ADP integrations or quarterly tax filing workflows.",
+        "evidence": [
+          "ADP Tax Filing - Quarterly tax filing integration",
+          "ADP's Q2 2025 specifications",
+          "Government tax filing requirements for tips earned in Wyoming"
+        ],
+        "review_required": true,
+        "evaluation": {
+          "model_confidence": 100,
+          "lexical_relevance": 0,
+          "candidate_rank": null,
+          "candidate_margin": 0.0179,
+          "evidence_grounding": 100,
+          "selection_agreement": 0
+        },
+        "raw_prediction": {
+          "decision": "no_matching_e2e",
+          "business_process_name": null,
+          "e2e_name": null,
+          "confidence": 100,
+          "confidence_band": "High",
+          "reasoning": "The release note describes updates to the 'ADP Tax Filing - Quarterly tax filing integration' to meet specific ADP and government requirements. The candidate E2E catalog contains payroll and compensation processes (such as Tax Elections, Pay Input, and Compensation Changes) but does not include any test cases for ADP integrations or quarterly tax filing workflows.",
+          "evidence": [
+            "ADP Tax Filing - Quarterly tax filing integration",
+            "ADP's Q2 2025 specifications",
+            "Government tax filing requirements for tips earned in Wyoming"
+          ],
+          "review_required": false
+        },
+        "model_error": null
+      },
+      "prompt_sha256": "93be4b0f19cce64c29e952f144b76d050b10aa6d5bdf5f566c3d9c2947696c5f"
+    },
+    {
+      "case_id": "WD2025-MAP-012",
+      "shortlist": [
+        "LRN_001 - Create and Edit a Course, Program, Lesson, and Topic",
+        "PAY_003 - Address Change to Taxes",
+        "PAY_001 - Pay Input to Settlement",
+        "PAY_002 - Process On Demand Payment",
+        "PAY_004 - Payment Elections (Regular and Bonus)",
+        "PAY_005 - Tax Elections - Federal, State and Local",
+        "HCM_003 - Change Contact Information",
+        "REC_001 - Create to Close (Job Requisition)"
+      ],
+      "result": {
+        "decision": "no_matching_e2e",
+        "business_process_name": null,
+        "e2e_name": null,
+        "confidence": 43,
+        "confidence_band": "low",
+        "reasoning": "The release note describes a change to the retention limits of audit history for specific Learning course attributes to optimize data storage. The candidate E2E 'LRN_001 - Create and Edit a Course, Program, Lesson, and Topic' covers the functional workflow of managing courses, but does not cover the verification of audit log retention periods or system-level audit configuration.",
+        "evidence": [
+          "update the audit history criteria",
+          "retains audit history for 7 years",
+          "retains audit history for 1 hour"
+        ],
+        "review_required": true,
+        "evaluation": {
+          "model_confidence": 95,
+          "lexical_relevance": 0,
+          "candidate_rank": null,
+          "candidate_margin": 0.3138,
+          "evidence_grounding": 100,
+          "selection_agreement": 0
+        },
+        "raw_prediction": {
+          "decision": "no_matching_e2e",
+          "business_process_name": null,
+          "e2e_name": null,
+          "confidence": 95,
+          "confidence_band": "High",
+          "reasoning": "The release note describes a change to the retention limits of audit history for specific Learning course attributes to optimize data storage. The candidate E2E 'LRN_001 - Create and Edit a Course, Program, Lesson, and Topic' covers the functional workflow of managing courses, but does not cover the verification of audit log retention periods or system-level audit configuration.",
+          "evidence": [
+            "update the audit history criteria",
+            "retains audit history for 7 years",
+            "retains audit history for 1 hour"
+          ],
+          "review_required": true
+        },
+        "model_error": null
+      },
+      "prompt_sha256": "275f244d8be7b951e2e37d0751b40b5a5ac5b503b272ad1813d70fd24de4b1aa"
+    },
+    {
+      "case_id": "WD2025-MAP-014",
+      "shortlist": [
+        "HCM_001 - Personal Elements Change (HR)",
+        "HCM_006 - Convert to Employee (Impact on Pay)",
+        "HCM_003 - Change Contact Information",
+        "HCM_002 - Personal Elements Change (ESS)",
+        "HCM_005 - Rehire to Pay",
+        "HCM_007 - Contract Contingent Worker",
+        "HCM_009 - Termination to Pay",
+        "HCM_008 - Change Job to Pay"
+      ],
+      "result": {
+        "decision": "unable_to_identify",
+        "business_process_name": null,
+        "e2e_name": null,
+        "confidence": 0,
+        "confidence_band": "low",
+        "reasoning": "Model endpoint returned HTTP 500. Check model access, key and quota.",
+        "evidence": [],
+        "review_required": true,
+        "shortlisted_candidates": [
+          "HCM_001 - Personal Elements Change (HR)",
+          "HCM_006 - Convert to Employee (Impact on Pay)",
+          "HCM_003 - Change Contact Information",
+          "HCM_002 - Personal Elements Change (ESS)",
+          "HCM_005 - Rehire to Pay",
+          "HCM_007 - Contract Contingent Worker",
+          "HCM_009 - Termination to Pay",
+          "HCM_008 - Change Job to Pay"
+        ],
+        "raw_prediction": null,
+        "model_error": "Model endpoint returned HTTP 500. Check model access, key and quota."
+      },
+      "prompt_sha256": "e6caa8331c30615ce697b22bb2ab6c9baffb519c7c94bf28f4b93a9ac2ff6903"
+    },
+    {
+      "case_id": "WD2025-MAP-013",
+      "shortlist": [
+        "REC_001 - Create to Close (Job Requisition)",
+        "REC_004 - Refer a Candidate",
+        "REC_003 - Recruit an Internal Candidate",
+        "HCM_002 - Personal Elements Change (ESS)",
+        "HCM_005 - Rehire to Pay",
+        "HCM_008 - Change Job to Pay",
+        "HCM_004 - Hire to Pay",
+        "HCM_001 - Personal Elements Change (HR)"
+      ],
+      "result": {
+        "decision": "no_matching_e2e",
+        "business_process_name": null,
+        "e2e_name": null,
+        "confidence": 43,
+        "confidence_band": "low",
+        "reasoning": "The release note introduces a specific new functionality called 'Certificate of Eligibles' which includes its own distinct business processes (Create Certificate of Eligibles, Return Certificate of Eligibles, and Revise Certificate of Eligibles). The provided E2E catalog contains general recruiting and HCM processes, but none specifically encompass this new certificate-based candidate selection and management workflow.",
+        "evidence": [
+          "Certificate of Eligibles",
+          "Create Certificate of Eligibles",
+          "Return Certificate of Eligibles",
+          "Revise Certificate of Eligibles"
+        ],
+        "review_required": true,
+        "evaluation": {
+          "model_confidence": 95,
+          "lexical_relevance": 0,
+          "candidate_rank": null,
+          "candidate_margin": 0.0191,
+          "evidence_grounding": 100,
+          "selection_agreement": 0
+        },
+        "raw_prediction": {
+          "decision": "no_matching_e2e",
+          "business_process_name": null,
+          "e2e_name": null,
+          "confidence": 95,
+          "confidence_band": "High",
+          "reasoning": "The release note introduces a specific new functionality called 'Certificate of Eligibles' which includes its own distinct business processes (Create Certificate of Eligibles, Return Certificate of Eligibles, and Revise Certificate of Eligibles). The provided E2E catalog contains general recruiting and HCM processes, but none specifically encompass this new certificate-based candidate selection and management workflow.",
+          "evidence": [
+            "Certificate of Eligibles",
+            "Create Certificate of Eligibles",
+            "Return Certificate of Eligibles",
+            "Revise Certificate of Eligibles"
+          ],
+          "review_required": true
+        },
+        "model_error": null
+      },
+      "prompt_sha256": "d9a521bcb708df05bc21d44b688f293268f2f4c4e7a031e08333a028eca474bb"
+    },
+    {
+      "case_id": "WD2025-MAP-015",
+      "shortlist": [
+        "HCM_001 - Personal Elements Change (HR)",
+        "HCM_009 - Termination to Pay",
+        "HCM_008 - Change Job to Pay",
+        "HCM_006 - Convert to Employee (Impact on Pay)",
+        "HCM_007 - Contract Contingent Worker",
+        "HCM_003 - Change Contact Information",
+        "HCM_002 - Personal Elements Change (ESS)",
+        "HCM_004 - Hire to Pay"
+      ],
+      "result": {
+        "decision": "no_matching_e2e",
+        "business_process_name": null,
+        "e2e_name": null,
+        "confidence": 45,
+        "confidence_band": "low",
+        "reasoning": "The release note describes a purely visual UI update (icon color) for a specific question set within the Peakon Employee Voice module. The candidate E2E test cases are all focused on core HCM business processes (Hire, Termination, Change Job, etc.) and do not cover Peakon functionality or UI configuration.",
+        "evidence": [
+          "update the icon color",
+          "COVID-19 question set",
+          "visual clarity",
+          "consistent color differentiation"
+        ],
+        "review_required": true,
+        "evaluation": {
+          "model_confidence": 100,
+          "lexical_relevance": 0,
+          "candidate_rank": null,
+          "candidate_margin": 0.0043,
+          "evidence_grounding": 100,
+          "selection_agreement": 0
+        },
+        "raw_prediction": {
+          "decision": "no_matching_e2e",
+          "business_process_name": null,
+          "e2e_name": null,
+          "confidence": 100,
+          "confidence_band": "High",
+          "reasoning": "The release note describes a purely visual UI update (icon color) for a specific question set within the Peakon Employee Voice module. The candidate E2E test cases are all focused on core HCM business processes (Hire, Termination, Change Job, etc.) and do not cover Peakon functionality or UI configuration.",
+          "evidence": [
+            "update the icon color",
+            "COVID-19 question set",
+            "visual clarity",
+            "consistent color differentiation"
+          ],
+          "review_required": false
+        },
+        "model_error": null
+      },
+      "prompt_sha256": "52160a05ff632bf094e0061517a554fb7871ca07b4ef18558035f7f3a3726413"
+    },
+    {
+      "case_id": "WD2025-MAP-016",
+      "shortlist": [
+        "HCM_003 - Change Contact Information",
+        "HCM_009 - Termination to Pay",
+        "HCM_005 - Rehire to Pay",
+        "HCM_002 - Personal Elements Change (ESS)",
+        "HCM_001 - Personal Elements Change (HR)",
+        "HCM_006 - Convert to Employee (Impact on Pay)",
+        "HCM_007 - Contract Contingent Worker",
+        "HCM_004 - Hire to Pay"
+      ],
+      "result": {
+        "decision": "unable_to_identify",
+        "business_process_name": null,
+        "e2e_name": null,
+        "confidence": 0,
+        "confidence_band": "low",
+        "reasoning": "Model endpoint returned HTTP 500. Check model access, key and quota.",
+        "evidence": [],
+        "review_required": true,
+        "shortlisted_candidates": [
+          "HCM_003 - Change Contact Information",
+          "HCM_009 - Termination to Pay",
+          "HCM_005 - Rehire to Pay",
+          "HCM_002 - Personal Elements Change (ESS)",
+          "HCM_001 - Personal Elements Change (HR)",
+          "HCM_006 - Convert to Employee (Impact on Pay)",
+          "HCM_007 - Contract Contingent Worker",
+          "HCM_004 - Hire to Pay"
+        ],
+        "raw_prediction": null,
+        "model_error": "Model endpoint returned HTTP 500. Check model access, key and quota."
+      },
+      "prompt_sha256": "f0cf82a71a0a52863cd2375a23eb2eca937a20ae7596a8c404975a12eb35a0a9"
+    },
+    {
+      "case_id": "WD2025-MAP-018",
+      "shortlist": [
+        "Create Self Service Expense Report",
+        "TAL_008 - Disciplinary Plan",
+        "ABS_002 - Return from Leave (Paid and Unpaid)",
+        "TT_001 - Time to Pay (Reported, Elapsed and Exception)",
+        "REC_001 - Create to Close (Job Requisition)",
+        "PAY_004 - Payment Elections (Regular and Bonus)",
+        "TAL_009 - Talent Review",
+        "TAL_005 - Talent Elements (Succession Pool, Talent Pool and Career Profile)"
+      ],
+      "result": {
+        "decision": "no_matching_e2e",
+        "business_process_name": null,
+        "e2e_name": null,
+        "confidence": 45,
+        "confidence_band": "low",
+        "reasoning": "The release note describes a system-level technical update regarding a 'Trickle Index Query Status' field on a 'View Data Scramble Status' report used for monitoring reindexing operations. The candidate E2E test cases are all functional business processes (Talent, Payroll, Expense, Recruitment, Time, Leave) and do not encompass system administration or data scrambling functionality.",
+        "evidence": [
+          "Trickle Index Query Status field",
+          "View Data Scramble Status report",
+          "scrambled value reindexing operation"
+        ],
+        "review_required": true,
+        "evaluation": {
+          "model_confidence": 100,
+          "lexical_relevance": 0,
+          "candidate_rank": null,
+          "candidate_margin": 0.0055,
+          "evidence_grounding": 100,
+          "selection_agreement": 0
+        },
+        "raw_prediction": {
+          "decision": "no_matching_e2e",
+          "business_process_name": null,
+          "e2e_name": null,
+          "confidence": 100,
+          "confidence_band": "High",
+          "reasoning": "The release note describes a system-level technical update regarding a 'Trickle Index Query Status' field on a 'View Data Scramble Status' report used for monitoring reindexing operations. The candidate E2E test cases are all functional business processes (Talent, Payroll, Expense, Recruitment, Time, Leave) and do not encompass system administration or data scrambling functionality.",
+          "evidence": [
+            "Trickle Index Query Status field",
+            "View Data Scramble Status report",
+            "scrambled value reindexing operation"
+          ],
+          "review_required": false
+        },
+        "model_error": null
+      },
+      "prompt_sha256": "11308d1cff0ff073b538370e6ffda76eaf1a741d50ee4a392ecfcd7e3d26538a"
+    },
+    {
+      "case_id": "WD2025-MAP-017",
+      "shortlist": [
+        "HCM_002 - Personal Elements Change (ESS)",
+        "HCM_001 - Personal Elements Change (HR)",
+        "REC_001 - Create to Close (Job Requisition)",
+        "HCM_009 - Termination to Pay",
+        "HCM_003 - Change Contact Information",
+        "HCM_007 - Contract Contingent Worker",
+        "HCM_006 - Convert to Employee (Impact on Pay)",
+        "REC_004 - Refer a Candidate"
+      ],
+      "result": {
+        "decision": "no_matching_e2e",
+        "business_process_name": null,
+        "e2e_name": null,
+        "confidence": 45,
+        "confidence_band": "low",
+        "reasoning": "The release note describes a new administrative self-service feature for deleting survey scores, comments, and attribute data within the Peakon Employee Voice module. The candidate E2E list is limited to standard HCM (Personal Elements, Termination, etc.) and Recruiting (Job Requisition, Refer a Candidate) workflows, none of which cover Peakon survey data management or administrative data deletion tools.",
+        "evidence": [
+          "Data Deletion Self Service",
+          "delete employee scores and comments",
+          "sensitive and restricted attribute data",
+          "Peakon Employee Voice"
+        ],
+        "review_required": true,
+        "evaluation": {
+          "model_confidence": 100,
+          "lexical_relevance": 0,
+          "candidate_rank": null,
+          "candidate_margin": 0.0052,
+          "evidence_grounding": 100,
+          "selection_agreement": 0
+        },
+        "raw_prediction": {
+          "decision": "no_matching_e2e",
+          "business_process_name": null,
+          "e2e_name": null,
+          "confidence": 100,
+          "confidence_band": "High",
+          "reasoning": "The release note describes a new administrative self-service feature for deleting survey scores, comments, and attribute data within the Peakon Employee Voice module. The candidate E2E list is limited to standard HCM (Personal Elements, Termination, etc.) and Recruiting (Job Requisition, Refer a Candidate) workflows, none of which cover Peakon survey data management or administrative data deletion tools.",
+          "evidence": [
+            "Data Deletion Self Service",
+            "delete employee scores and comments",
+            "sensitive and restricted attribute data",
+            "Peakon Employee Voice"
+          ],
+          "review_required": false
+        },
+        "model_error": null
+      },
+      "prompt_sha256": "4d612a172188395f5dc6648a0537be6c303792b1daa85c254e729f496256e8c5"
+    },
+    {
+      "case_id": "WD2025-MAP-019",
+      "shortlist": [
+        "ABS_001 - Leave Processing (Paid and Unpaid)",
+        "ABS_002 - Return from Leave (Paid and Unpaid)",
+        "TAL_001 - Performance Evaluation",
+        "HCM_003 - Change Contact Information",
+        "PAY_002 - Process On Demand Payment",
+        "ADVCOMP_001 - Initiate to Finalize Compensation Review Process",
+        "Create Self Service Expense Report",
+        "LRN_001 - Create and Edit a Course, Program, Lesson, and Topic"
+      ],
+      "result": {
+        "decision": "no_matching_e2e",
+        "business_process_name": null,
+        "e2e_name": null,
+        "confidence": 45,
+        "confidence_band": "low",
+        "reasoning": "The release note describes technical improvements to Prism Analytics dataset publishing infrastructure and row calculation logic. The candidate E2E catalog contains processes related to Leave, Performance, Contact Information, Payment, Compensation, Expenses, and Learning, none of which encompass Prism Analytics or dataset publishing.",
+        "evidence": [
+          "Dataset Publishing for Prism Analytics",
+          "improves the dataset publishing infrastructure"
+        ],
+        "review_required": true,
+        "evaluation": {
+          "model_confidence": 100,
+          "lexical_relevance": 0,
+          "candidate_rank": null,
+          "candidate_margin": 0.001,
+          "evidence_grounding": 100,
+          "selection_agreement": 0
+        },
+        "raw_prediction": {
+          "decision": "no_matching_e2e",
+          "business_process_name": null,
+          "e2e_name": null,
+          "confidence": 100,
+          "confidence_band": "High",
+          "reasoning": "The release note describes technical improvements to Prism Analytics dataset publishing infrastructure and row calculation logic. The candidate E2E catalog contains processes related to Leave, Performance, Contact Information, Payment, Compensation, Expenses, and Learning, none of which encompass Prism Analytics or dataset publishing.",
+          "evidence": [
+            "Dataset Publishing for Prism Analytics",
+            "improves the dataset publishing infrastructure"
+          ],
+          "review_required": false
+        },
+        "model_error": null
+      },
+      "prompt_sha256": "728dfecbe1d45e96893fb0ab5bc505bd1739603f4460a5d873605f0d8d5307e3"
+    },
+    {
+      "case_id": "WD2025-MAP-020",
+      "shortlist": [
+        "HCM_009 - Termination to Pay",
+        "HCM_006 - Convert to Employee (Impact on Pay)",
+        "HCM_008 - Change Job to Pay",
+        "HCM_005 - Rehire to Pay",
+        "HCM_004 - Hire to Pay",
+        "HCM_001 - Personal Elements Change (HR)",
+        "HCM_002 - Personal Elements Change (ESS)",
+        "HCM_003 - Change Contact Information"
+      ],
+      "result": {
+        "decision": "no_matching_e2e",
+        "business_process_name": null,
+        "e2e_name": null,
+        "confidence": 45,
+        "confidence_band": "low",
+        "reasoning": "The release note describes a UI/UX change regarding the placement of the 'Delete Question' button within the 'Peakon Employee Voice' functional area. The candidate E2E catalog is strictly limited to HCM lifecycle and payroll-related processes (e.g., Hire, Rehire, Termination, Change Job), which do not cover Peakon administration or survey configuration.",
+        "evidence": [
+          "Delete Question Button Placement",
+          "Peakon Employee Voice",
+          "Delete Question option"
+        ],
+        "review_required": true,
+        "evaluation": {
+          "model_confidence": 100,
+          "lexical_relevance": 0,
+          "candidate_rank": null,
+          "candidate_margin": 0.0052,
+          "evidence_grounding": 100,
+          "selection_agreement": 0
+        },
+        "raw_prediction": {
+          "decision": "no_matching_e2e",
+          "business_process_name": null,
+          "e2e_name": null,
+          "confidence": 100,
+          "confidence_band": "High",
+          "reasoning": "The release note describes a UI/UX change regarding the placement of the 'Delete Question' button within the 'Peakon Employee Voice' functional area. The candidate E2E catalog is strictly limited to HCM lifecycle and payroll-related processes (e.g., Hire, Rehire, Termination, Change Job), which do not cover Peakon administration or survey configuration.",
+          "evidence": [
+            "Delete Question Button Placement",
+            "Peakon Employee Voice",
+            "Delete Question option"
+          ],
+          "review_required": false
+        },
+        "model_error": null
+      },
+      "prompt_sha256": "7fce608bfa65cd2749673d9bdebd164b3df8033e8f3b3d10be76a1dbfa25c1ee"
+    },
+    {
+      "case_id": "WD2025-MAP-021",
+      "shortlist": [
+        "LRN_001 - Create and Edit a Course, Program, Lesson, and Topic",
+        "Create Self Service Expense Report",
+        "Create Expense Report for Worker_Non-Worker_Pre-hire",
+        "Copy an expense report",
+        "PAY_004 - Payment Elections (Regular and Bonus)",
+        "HCM_002 - Personal Elements Change (ESS)",
+        "HCM_003 - Change Contact Information",
+        "TAL_005 - Talent Elements (Succession Pool, Talent Pool and Career Profile)"
+      ],
+      "result": {
+        "decision": "no_matching_e2e",
+        "business_process_name": null,
+        "e2e_name": null,
+        "confidence": 45,
+        "confidence_band": "low",
+        "reasoning": "The release note describes technical enhancements to the EIB (Enterprise Interface Builder) tool specifically for Extend business objects, focusing on spreadsheet usability and Reference ID functionality. The candidate E2E catalog contains specific functional business process workflows (Learning, Expense, Payroll, HCM, Talent) and does not include any test cases related to EIB or Extend integration capabilities.",
+        "evidence": [
+          "EIB Enhancements for Extend Business Objects",
+          "improve the usability of EIB spreadsheets for Extend business objects",
+          "update and delete instances of Extend business objects with EIB"
+        ],
+        "review_required": true,
+        "evaluation": {
+          "model_confidence": 100,
+          "lexical_relevance": 0,
+          "candidate_rank": null,
+          "candidate_margin": 0.0013,
+          "evidence_grounding": 100,
+          "selection_agreement": 0
+        },
+        "raw_prediction": {
+          "decision": "no_matching_e2e",
+          "business_process_name": null,
+          "e2e_name": null,
+          "confidence": 100,
+          "confidence_band": "High",
+          "reasoning": "The release note describes technical enhancements to the EIB (Enterprise Interface Builder) tool specifically for Extend business objects, focusing on spreadsheet usability and Reference ID functionality. The candidate E2E catalog contains specific functional business process workflows (Learning, Expense, Payroll, HCM, Talent) and does not include any test cases related to EIB or Extend integration capabilities.",
+          "evidence": [
+            "EIB Enhancements for Extend Business Objects",
+            "improve the usability of EIB spreadsheets for Extend business objects",
+            "update and delete instances of Extend business objects with EIB"
+          ],
+          "review_required": false
+        },
+        "model_error": null
+      },
+      "prompt_sha256": "8dd25f466b1e56b79af595206a744fd4dfd979c97d2165f101253b9989b53707"
+    },
+    {
+      "case_id": "WD2025-MAP-023",
+      "shortlist": [
+        "ABS_001 - Leave Processing (Paid and Unpaid)",
+        "ABS_002 - Return from Leave (Paid and Unpaid)",
+        "ABS_005 - Time Off (Impact on Pay)",
+        "ABS_004 - Retro Return from Leave to Pay",
+        "TT_001 - Time to Pay (Reported, Elapsed and Exception)",
+        "ABS_003 - Retro Leave to Pay",
+        "HCM_007 - Contract Contingent Worker",
+        "HCM_003 - Change Contact Information"
+      ],
+      "result": {
+        "decision": "no_matching_e2e",
+        "business_process_name": null,
+        "e2e_name": null,
+        "confidence": 43,
+        "confidence_band": "low",
+        "reasoning": "The release note describes an enhancement to the Search user experience through NLP and AI-generated content by updating task and report descriptions. This is a metadata and UI-driven change intended to improve searchability, rather than a functional change to the business logic, calculations, or workflows of the Absence or Time Off processes. The candidate E2E tests are functional business processes, which do not cover search functionality or metadata updates.",
+        "evidence": [
+          "update task and report descriptions",
+          "enhance the Search user experience",
+          "update descriptions for these tasks and reports in Absence"
+        ],
+        "review_required": true,
+        "evaluation": {
+          "model_confidence": 95,
+          "lexical_relevance": 0,
+          "candidate_rank": null,
+          "candidate_margin": 0.0396,
+          "evidence_grounding": 100,
+          "selection_agreement": 0
+        },
+        "raw_prediction": {
+          "decision": "no_matching_e2e",
+          "business_process_name": null,
+          "e2e_name": null,
+          "confidence": 95,
+          "confidence_band": "High",
+          "reasoning": "The release note describes an enhancement to the Search user experience through NLP and AI-generated content by updating task and report descriptions. This is a metadata and UI-driven change intended to improve searchability, rather than a functional change to the business logic, calculations, or workflows of the Absence or Time Off processes. The candidate E2E tests are functional business processes, which do not cover search functionality or metadata updates.",
+          "evidence": [
+            "update task and report descriptions",
+            "enhance the Search user experience",
+            "update descriptions for these tasks and reports in Absence"
+          ],
+          "review_required": false
+        },
+        "model_error": null
+      },
+      "prompt_sha256": "3121d03a641a406026374447636cca5b68761de4384ce705bacde91ca4162e9f"
+    },
+    {
+      "case_id": "WD2025-MAP-022",
+      "shortlist": [
+        "LRN_001 - Create and Edit a Course, Program, Lesson, and Topic",
+        "PAY_004 - Payment Elections (Regular and Bonus)",
+        "PAY_002 - Process On Demand Payment",
+        "TT_001 - Time to Pay (Reported, Elapsed and Exception)",
+        "PAY_001 - Pay Input to Settlement",
+        "PAY_003 - Address Change to Taxes",
+        "PAY_005 - Tax Elections - Federal, State and Local",
+        "Create Credit Card"
+      ],
+      "result": {
+        "decision": "unable_to_identify",
+        "business_process_name": null,
+        "e2e_name": null,
+        "confidence": 0,
+        "confidence_band": "low",
+        "reasoning": "Model returned no text output",
+        "evidence": [],
+        "review_required": true,
+        "shortlisted_candidates": [
+          "LRN_001 - Create and Edit a Course, Program, Lesson, and Topic",
+          "PAY_004 - Payment Elections (Regular and Bonus)",
+          "PAY_002 - Process On Demand Payment",
+          "TT_001 - Time to Pay (Reported, Elapsed and Exception)",
+          "PAY_001 - Pay Input to Settlement",
+          "PAY_003 - Address Change to Taxes",
+          "PAY_005 - Tax Elections - Federal, State and Local",
+          "Create Credit Card"
+        ],
+        "raw_prediction": null,
+        "model_error": "Model returned no text output"
+      },
+      "prompt_sha256": "7d548ac2f2d0a92edfc55ed229325da3c14aee4792093760e89529e6bc772442"
+    },
+    {
+      "case_id": "WD2025-MAP-025",
+      "shortlist": [
+        "HCM_009 - Termination to Pay",
+        "HCM_003 - Change Contact Information",
+        "HCM_001 - Personal Elements Change (HR)",
+        "HCM_002 - Personal Elements Change (ESS)",
+        "HCM_007 - Contract Contingent Worker",
+        "HCM_005 - Rehire to Pay",
+        "HCM_006 - Convert to Employee (Impact on Pay)",
+        "HCM_004 - Hire to Pay"
+      ],
+      "result": {
+        "decision": "no_matching_e2e",
+        "business_process_name": null,
+        "e2e_name": null,
+        "confidence": 45,
+        "confidence_band": "low",
+        "reasoning": "The release note describes a new access control group for external administrators within the Peakon Employee Voice product to allow configuration by outside consultants. The candidate E2E catalog is focused on HCM core lifecycle processes (e.g., Hire, Terminate, Rehire, Contingent Worker) and does not include Peakon-specific access control or configuration management workflows.",
+        "evidence": [
+          "External Administrator",
+          "new access control group specifically designed for external administrators",
+          "onboard consultants from outside your organization to configure and set up Peakon"
+        ],
+        "review_required": true,
+        "evaluation": {
+          "model_confidence": 100,
+          "lexical_relevance": 0,
+          "candidate_rank": null,
+          "candidate_margin": 0.003,
+          "evidence_grounding": 100,
+          "selection_agreement": 0
+        },
+        "raw_prediction": {
+          "decision": "no_matching_e2e",
+          "business_process_name": null,
+          "e2e_name": null,
+          "confidence": 100,
+          "confidence_band": "High",
+          "reasoning": "The release note describes a new access control group for external administrators within the Peakon Employee Voice product to allow configuration by outside consultants. The candidate E2E catalog is focused on HCM core lifecycle processes (e.g., Hire, Terminate, Rehire, Contingent Worker) and does not include Peakon-specific access control or configuration management workflows.",
+          "evidence": [
+            "External Administrator",
+            "new access control group specifically designed for external administrators",
+            "onboard consultants from outside your organization to configure and set up Peakon"
+          ],
+          "review_required": false
+        },
+        "model_error": null
+      },
+      "prompt_sha256": "06750957119313cc30128cdbc55032db2b69b44d74f2e1475cdf8c68eafebe51"
+    },
+    {
+      "case_id": "WD2025-MAP-026",
+      "shortlist": [
+        "REC_003 - Recruit an Internal Candidate",
+        "REC_001 - Create to Close (Job Requisition)",
+        "HCM_003 - Change Contact Information",
+        "HCM_006 - Convert to Employee (Impact on Pay)",
+        "REC_004 - Refer a Candidate",
+        "HCM_005 - Rehire to Pay",
+        "HCM_007 - Contract Contingent Worker",
+        "HCM_009 - Termination to Pay"
+      ],
+      "result": {
+        "decision": "no_matching_e2e",
+        "business_process_name": null,
+        "e2e_name": null,
+        "confidence": 45,
+        "confidence_band": "low",
+        "reasoning": "The release note describes a configuration update for Peakon Employee Voice regarding email domain allow lists. The candidate E2E test cases are focused on recruitment and core HCM lifecycle processes (e.g., recruiting, rehire, termination) and do not cover Peakon domain management.",
+        "evidence": [
+          "Flexible Domain Allow List",
+          "update how email domains work with Peakon",
+          "add any email domain to your allow list"
+        ],
+        "review_required": true,
+        "evaluation": {
+          "model_confidence": 100,
+          "lexical_relevance": 0,
+          "candidate_rank": null,
+          "candidate_margin": 0.0039,
+          "evidence_grounding": 100,
+          "selection_agreement": 0
+        },
+        "raw_prediction": {
+          "decision": "no_matching_e2e",
+          "business_process_name": null,
+          "e2e_name": null,
+          "confidence": 100,
+          "confidence_band": "High",
+          "reasoning": "The release note describes a configuration update for Peakon Employee Voice regarding email domain allow lists. The candidate E2E test cases are focused on recruitment and core HCM lifecycle processes (e.g., recruiting, rehire, termination) and do not cover Peakon domain management.",
+          "evidence": [
+            "Flexible Domain Allow List",
+            "update how email domains work with Peakon",
+            "add any email domain to your allow list"
+          ],
+          "review_required": false
+        },
+        "model_error": null
+      },
+      "prompt_sha256": "5392e9356a2eca480608880eac5779aca7584ac85e586b55b6e10d76b1cf3eeb"
+    },
+    {
+      "case_id": "WD2025-MAP-028",
+      "shortlist": [
+        "HCM_003 - Change Contact Information",
+        "HCM_007 - Contract Contingent Worker",
+        "HCM_008 - Change Job to Pay",
+        "HCM_002 - Personal Elements Change (ESS)",
+        "HCM_006 - Convert to Employee (Impact on Pay)",
+        "HCM_009 - Termination to Pay",
+        "HCM_001 - Personal Elements Change (HR)",
+        "HCM_004 - Hire to Pay"
+      ],
+      "result": {
+        "decision": "no_matching_e2e",
+        "business_process_name": null,
+        "e2e_name": null,
+        "confidence": 45,
+        "confidence_band": "low",
+        "reasoning": "The release note describes a feature update for Peakon Employee Voice related to managing focus areas within Curated Insights. The candidate E2E test cases are all core HCM transactional processes (e.g., Hire to Pay, Termination, Change Contact Information) and do not cover engagement survey or insight management functionality.",
+        "evidence": [
+          "Focus Areas on Curated Insights",
+          "view and set up focus areas through Curated Insights",
+          "Diversity & Inclusion, Health & Wellbeing, and Transformation & Change"
+        ],
+        "review_required": true,
+        "evaluation": {
+          "model_confidence": 100,
+          "lexical_relevance": 0,
+          "candidate_rank": null,
+          "candidate_margin": 0.0194,
+          "evidence_grounding": 100,
+          "selection_agreement": 0
+        },
+        "raw_prediction": {
+          "decision": "no_matching_e2e",
+          "business_process_name": null,
+          "e2e_name": null,
+          "confidence": 100,
+          "confidence_band": "High",
+          "reasoning": "The release note describes a feature update for Peakon Employee Voice related to managing focus areas within Curated Insights. The candidate E2E test cases are all core HCM transactional processes (e.g., Hire to Pay, Termination, Change Contact Information) and do not cover engagement survey or insight management functionality.",
+          "evidence": [
+            "Focus Areas on Curated Insights",
+            "view and set up focus areas through Curated Insights",
+            "Diversity & Inclusion, Health & Wellbeing, and Transformation & Change"
+          ],
+          "review_required": false
+        },
+        "model_error": null
+      },
+      "prompt_sha256": "ca3d8412b3abf37f6b22f98b35aedadd22c506d7ca78c6ae0f93692de74a8895"
+    },
+    {
+      "case_id": "WD2025-MAP-029",
+      "shortlist": [
+        "HCM_001 - Personal Elements Change (HR)",
+        "HCM_002 - Personal Elements Change (ESS)",
+        "HCM_009 - Termination to Pay",
+        "HCM_007 - Contract Contingent Worker",
+        "HCM_003 - Change Contact Information",
+        "HCM_008 - Change Job to Pay",
+        "HCM_006 - Convert to Employee (Impact on Pay)",
+        "HCM_005 - Rehire to Pay"
+      ],
+      "result": {
+        "decision": "no_matching_e2e",
+        "business_process_name": null,
+        "e2e_name": null,
+        "confidence": 45,
+        "confidence_band": "low",
+        "reasoning": "The release note describes a cosmetic/informational update to German translations on a 'How it Works' page for Peakon Employee Voice. The candidate E2E test cases are all HCM-related business processes (e.g., Personal Elements Change, Termination, Rehire) and do not cover UI translation or Peakon informational content.",
+        "evidence": [
+          "German Translation Enhancements",
+          "enhance the German translation of the Data Source and Access section",
+          "Workday Peakon Employee Voice: How it Works page"
+        ],
+        "review_required": true,
+        "evaluation": {
+          "model_confidence": 100,
+          "lexical_relevance": 0,
+          "candidate_rank": null,
+          "candidate_margin": 0.0012,
+          "evidence_grounding": 100,
+          "selection_agreement": 0
+        },
+        "raw_prediction": {
+          "decision": "no_matching_e2e",
+          "business_process_name": null,
+          "e2e_name": null,
+          "confidence": 100,
+          "confidence_band": "High",
+          "reasoning": "The release note describes a cosmetic/informational update to German translations on a 'How it Works' page for Peakon Employee Voice. The candidate E2E test cases are all HCM-related business processes (e.g., Personal Elements Change, Termination, Rehire) and do not cover UI translation or Peakon informational content.",
+          "evidence": [
+            "German Translation Enhancements",
+            "enhance the German translation of the Data Source and Access section",
+            "Workday Peakon Employee Voice: How it Works page"
+          ],
+          "review_required": false
+        },
+        "model_error": null
+      },
+      "prompt_sha256": "2d55ba7238f71e84e0a3b74112d4419d4b46472eb959c83c130f39db592df345"
+    },
+    {
+      "case_id": "WD2025-MAP-027",
+      "shortlist": [
+        "PAY_004 - Payment Elections (Regular and Bonus)",
+        "PAY_003 - Address Change to Taxes",
+        "PAY_001 - Pay Input to Settlement",
+        "PAY_005 - Tax Elections - Federal, State and Local",
+        "PAY_002 - Process On Demand Payment",
+        "COMP_001 - Compensation Change to Pay",
+        "COMP_002 - Compensation Change to Pay (Retro)",
+        "COMP_003 - Reward to Pay (One-Time Payment)"
+      ],
+      "result": {
+        "decision": "unable_to_identify",
+        "business_process_name": null,
+        "e2e_name": null,
+        "confidence": 0,
+        "confidence_band": "low",
+        "reasoning": "Model returned no text output",
+        "evidence": [],
+        "review_required": true,
+        "shortlisted_candidates": [
+          "PAY_004 - Payment Elections (Regular and Bonus)",
+          "PAY_003 - Address Change to Taxes",
+          "PAY_001 - Pay Input to Settlement",
+          "PAY_005 - Tax Elections - Federal, State and Local",
+          "PAY_002 - Process On Demand Payment",
+          "COMP_001 - Compensation Change to Pay",
+          "COMP_002 - Compensation Change to Pay (Retro)",
+          "COMP_003 - Reward to Pay (One-Time Payment)"
+        ],
+        "raw_prediction": null,
+        "model_error": "Model returned no text output"
+      },
+      "prompt_sha256": "1276db3951cef69eaa3f01e7bb06d95ff3368f888031e6a943a7551f5482ae6e"
+    },
+    {
+      "case_id": "WD2025-MAP-031",
+      "shortlist": [
+        "Create expense item",
+        "HCM_009 - Termination to Pay",
+        "PAY_002 - Process On Demand Payment",
+        "PAY_004 - Payment Elections (Regular and Bonus)",
+        "Create Expense Report for Worker_Non-Worker_Pre-hire",
+        "HCM_002 - Personal Elements Change (ESS)",
+        "Create Credit Card",
+        "HCM_003 - Change Contact Information"
+      ],
+      "result": {
+        "decision": "no_matching_e2e",
+        "business_process_name": null,
+        "e2e_name": null,
+        "confidence": 45,
+        "confidence_band": "low",
+        "reasoning": "The release note describes a UI enhancement for document layouts (adding hyperlinks to text), whereas the candidate E2E catalog consists of specific business processes related to Expense management, HCM, and Payroll. There is no functional overlap.",
+        "evidence": [
+          "add hyperlinks to text in document layouts",
+          "Create Link icon in the toolbar of the document layout"
+        ],
+        "review_required": true,
+        "evaluation": {
+          "model_confidence": 100,
+          "lexical_relevance": 0,
+          "candidate_rank": null,
+          "candidate_margin": 0.0005,
+          "evidence_grounding": 100,
+          "selection_agreement": 0
+        },
+        "raw_prediction": {
+          "decision": "no_matching_e2e",
+          "business_process_name": null,
+          "e2e_name": null,
+          "confidence": 100,
+          "confidence_band": "High",
+          "reasoning": "The release note describes a UI enhancement for document layouts (adding hyperlinks to text), whereas the candidate E2E catalog consists of specific business processes related to Expense management, HCM, and Payroll. There is no functional overlap.",
+          "evidence": [
+            "add hyperlinks to text in document layouts",
+            "Create Link icon in the toolbar of the document layout"
+          ],
+          "review_required": false
+        },
+        "model_error": null
+      },
+      "prompt_sha256": "0e9e8fda3673ef2bff4230319cdb1a47f43a116745c657658084f66081b27c2c"
+    },
+    {
+      "case_id": "WD2025-MAP-030",
+      "shortlist": [
+        "HCM_009 - Termination to Pay",
+        "ABS_001 - Leave Processing (Paid and Unpaid)",
+        "HCM_003 - Change Contact Information",
+        "ABS_004 - Retro Return from Leave to Pay",
+        "HCM_007 - Contract Contingent Worker",
+        "HCM_002 - Personal Elements Change (ESS)",
+        "ABS_002 - Return from Leave (Paid and Unpaid)",
+        "ABS_003 - Retro Leave to Pay"
+      ],
+      "result": {
+        "decision": "no_matching_e2e",
+        "business_process_name": null,
+        "e2e_name": null,
+        "confidence": 45,
+        "confidence_band": "low",
+        "reasoning": "The release note describes a technical update to the Hibob integration webhook for Peakon Employee Voice, specifically removing the requirement for the 'Employee On Leave' event. The candidate list consists of HCM and Absence Management business processes, which do not cover integration webhook functionality or data processing for third-party webhooks.",
+        "evidence": [
+          "Hibob Integration Webhooks",
+          "no longer requiring the Employee On Leave event for the Hibob integration webhook"
+        ],
+        "review_required": true,
+        "evaluation": {
+          "model_confidence": 100,
+          "lexical_relevance": 0,
+          "candidate_rank": null,
+          "candidate_margin": 0.0003,
+          "evidence_grounding": 100,
+          "selection_agreement": 0
+        },
+        "raw_prediction": {
+          "decision": "no_matching_e2e",
+          "business_process_name": null,
+          "e2e_name": null,
+          "confidence": 100,
+          "confidence_band": "High",
+          "reasoning": "The release note describes a technical update to the Hibob integration webhook for Peakon Employee Voice, specifically removing the requirement for the 'Employee On Leave' event. The candidate list consists of HCM and Absence Management business processes, which do not cover integration webhook functionality or data processing for third-party webhooks.",
+          "evidence": [
+            "Hibob Integration Webhooks",
+            "no longer requiring the Employee On Leave event for the Hibob integration webhook"
+          ],
+          "review_required": false
+        },
+        "model_error": null
+      },
+      "prompt_sha256": "816d6a122220af65a3c4c54a5af46f1b8f88f22470546965968f20f03b522d08"
+    },
+    {
+      "case_id": "WD2025-MAP-032",
+      "shortlist": [
+        "TT_001 - Time to Pay (Reported, Elapsed and Exception)",
+        "Create Expense Report for Worker_Non-Worker_Pre-hire",
+        "TAL_003 - Performance Improvement Plan",
+        "Create Credit Card",
+        "Create Self Service Expense Report",
+        "REC_001 - Create to Close (Job Requisition)",
+        "COMP_002 - Compensation Change to Pay (Retro)",
+        "REC_003 - Recruit an Internal Candidate"
+      ],
+      "result": {
+        "decision": "no_matching_e2e",
+        "business_process_name": null,
+        "e2e_name": null,
+        "confidence": 45,
+        "confidence_band": "low",
+        "reasoning": "The release note describes a technical infrastructure change involving idle timeout thresholds for Workday API requests during data uploads to improve service resiliency. The candidate E2E tests are all high-level business processes (Expense, Recruitment, Compensation, Performance) and do not cover API-level connectivity or data upload timeout configurations.",
+        "evidence": [
+          "Idle Threshold for Workday API Request Uploads",
+          "add an idle threshold on Workday API requests that upload data",
+          "improves resiliency for large data uploads"
+        ],
+        "review_required": true,
+        "evaluation": {
+          "model_confidence": 100,
+          "lexical_relevance": 0,
+          "candidate_rank": null,
+          "candidate_margin": 0.1985,
+          "evidence_grounding": 100,
+          "selection_agreement": 0
+        },
+        "raw_prediction": {
+          "decision": "no_matching_e2e",
+          "business_process_name": null,
+          "e2e_name": null,
+          "confidence": 100,
+          "confidence_band": "High",
+          "reasoning": "The release note describes a technical infrastructure change involving idle timeout thresholds for Workday API requests during data uploads to improve service resiliency. The candidate E2E tests are all high-level business processes (Expense, Recruitment, Compensation, Performance) and do not cover API-level connectivity or data upload timeout configurations.",
+          "evidence": [
+            "Idle Threshold for Workday API Request Uploads",
+            "add an idle threshold on Workday API requests that upload data",
+            "improves resiliency for large data uploads"
+          ],
+          "review_required": false
+        },
+        "model_error": null
+      },
+      "prompt_sha256": "0bfcc0cbf7b22d980b093629f8a1a1b14330d710ebdcde7d0b2def245b45144c"
+    },
+    {
+      "case_id": "WD2025-MAP-033",
+      "shortlist": [
+        "LRN_001 - Create and Edit a Course, Program, Lesson, and Topic",
+        "PAY_002 - Process On Demand Payment",
+        "PAY_004 - Payment Elections (Regular and Bonus)",
+        "PAY_005 - Tax Elections - Federal, State and Local",
+        "PAY_003 - Address Change to Taxes",
+        "PAY_001 - Pay Input to Settlement",
+        "HCM_007 - Contract Contingent Worker",
+        "HCM_001 - Personal Elements Change (HR)"
+      ],
+      "result": {
+        "decision": "no_matching_e2e",
+        "business_process_name": null,
+        "e2e_name": null,
+        "confidence": 43,
+        "confidence_band": "low",
+        "reasoning": "The release note describes a visual brand refresh involving the replacement of illustrations across various Learning pages. The candidate E2E tests focus on functional business processes (such as creating or editing content), whereas this change is purely aesthetic/UI-based and does not alter the functional workflow of the Learning module.",
+        "evidence": [
+          "Workday replaces existing illustrations in the Learning product",
+          "corporate brand refresh",
+          "update the illustrations on these locations"
+        ],
+        "review_required": true,
+        "evaluation": {
+          "model_confidence": 95,
+          "lexical_relevance": 0,
+          "candidate_rank": null,
+          "candidate_margin": 0.279,
+          "evidence_grounding": 100,
+          "selection_agreement": 0
+        },
+        "raw_prediction": {
+          "decision": "no_matching_e2e",
+          "business_process_name": null,
+          "e2e_name": null,
+          "confidence": 95,
+          "confidence_band": "High",
+          "reasoning": "The release note describes a visual brand refresh involving the replacement of illustrations across various Learning pages. The candidate E2E tests focus on functional business processes (such as creating or editing content), whereas this change is purely aesthetic/UI-based and does not alter the functional workflow of the Learning module.",
+          "evidence": [
+            "Workday replaces existing illustrations in the Learning product",
+            "corporate brand refresh",
+            "update the illustrations on these locations"
+          ],
+          "review_required": false
+        },
+        "model_error": null
+      },
+      "prompt_sha256": "f95d63214266fb9b7a4372b6d856f6d9ded8e22f2091b805c2b9cd856f8c7eab"
+    },
+    {
+      "case_id": "WD2025-MAP-035",
+      "shortlist": [
+        "HCM_002 - Personal Elements Change (ESS)",
+        "HCM_003 - Change Contact Information",
+        "PAY_004 - Payment Elections (Regular and Bonus)",
+        "ABS_005 - Time Off (Impact on Pay)",
+        "TAL_004 - Development Plan",
+        "HCM_001 - Personal Elements Change (HR)",
+        "ABS_003 - Retro Leave to Pay",
+        "ABS_004 - Retro Return from Leave to Pay"
+      ],
+      "result": {
+        "decision": "no_matching_e2e",
+        "business_process_name": null,
+        "e2e_name": null,
+        "confidence": 45,
+        "confidence_band": "low",
+        "reasoning": "The release note describes a cosmetic branding update involving image replacement in the 'My Tasks' interface. The candidate E2E catalog consists of functional business processes (HCM, PAY, ABS, TAL) which do not cover UI/branding changes.",
+        "evidence": [
+          "Workday replaces images in the product",
+          "replacing the image of the paper airplane that displays when you have no tasks"
+        ],
+        "review_required": true,
+        "evaluation": {
+          "model_confidence": 100,
+          "lexical_relevance": 0,
+          "candidate_rank": null,
+          "candidate_margin": 0.0012,
+          "evidence_grounding": 100,
+          "selection_agreement": 0
+        },
+        "raw_prediction": {
+          "decision": "no_matching_e2e",
+          "business_process_name": null,
+          "e2e_name": null,
+          "confidence": 100,
+          "confidence_band": "High",
+          "reasoning": "The release note describes a cosmetic branding update involving image replacement in the 'My Tasks' interface. The candidate E2E catalog consists of functional business processes (HCM, PAY, ABS, TAL) which do not cover UI/branding changes.",
+          "evidence": [
+            "Workday replaces images in the product",
+            "replacing the image of the paper airplane that displays when you have no tasks"
+          ],
+          "review_required": false
+        },
+        "model_error": null
+      },
+      "prompt_sha256": "94033ae448f954dad5acb18810ba1a6688247fa3b536ed76139956b7addf1af5"
+    },
+    {
+      "case_id": "WD2025-MAP-034",
+      "shortlist": [
+        "LRN_001 - Create and Edit a Course, Program, Lesson, and Topic",
+        "PAY_004 - Payment Elections (Regular and Bonus)",
+        "PAY_002 - Process On Demand Payment",
+        "PAY_005 - Tax Elections - Federal, State and Local",
+        "PAY_001 - Pay Input to Settlement",
+        "PAY_003 - Address Change to Taxes",
+        "HCM_001 - Personal Elements Change (HR)",
+        "HCM_002 - Personal Elements Change (ESS)"
+      ],
+      "result": {
+        "decision": "no_matching_e2e",
+        "business_process_name": null,
+        "e2e_name": null,
+        "confidence": 45,
+        "confidence_band": "low",
+        "reasoning": "The release note describes a visual branding update involving image replacement within the Audience Builder dashboard and Engagement Builder report. The provided E2E catalog contains functional tests for content creation (LRN_001) and payroll/HCM processes, but none of the candidates are designed to validate UI branding or image assets in the Engagement Builder tool.",
+        "evidence": [
+          "Image Replacement in Engagement Builder",
+          "replaces images in the product",
+          "update the Audience Builder dashboard and Engagement Builder report by replacing the images"
+        ],
+        "review_required": true,
+        "evaluation": {
+          "model_confidence": 100,
+          "lexical_relevance": 0,
+          "candidate_rank": null,
+          "candidate_margin": 0.2403,
+          "evidence_grounding": 100,
+          "selection_agreement": 0
+        },
+        "raw_prediction": {
+          "decision": "no_matching_e2e",
+          "business_process_name": null,
+          "e2e_name": null,
+          "confidence": 100,
+          "confidence_band": "High",
+          "reasoning": "The release note describes a visual branding update involving image replacement within the Audience Builder dashboard and Engagement Builder report. The provided E2E catalog contains functional tests for content creation (LRN_001) and payroll/HCM processes, but none of the candidates are designed to validate UI branding or image assets in the Engagement Builder tool.",
+          "evidence": [
+            "Image Replacement in Engagement Builder",
+            "replaces images in the product",
+            "update the Audience Builder dashboard and Engagement Builder report by replacing the images"
+          ],
+          "review_required": true
+        },
+        "model_error": null
+      },
+      "prompt_sha256": "83e4ec4804cdbd698d2fa11331c700cdf3f17eb38476e10874eab82689fa9dcc"
+    },
+    {
+      "case_id": "WD2025-MAP-037",
+      "shortlist": [
+        "HCM_002 - Personal Elements Change (ESS)",
+        "HCM_001 - Personal Elements Change (HR)",
+        "HCM_003 - Change Contact Information",
+        "TAL_004 - Development Plan",
+        "TAL_005 - Talent Elements (Succession Pool, Talent Pool and Career Profile)",
+        "ABS_001 - Leave Processing (Paid and Unpaid)",
+        "REC_003 - Recruit an Internal Candidate",
+        "ABS_005 - Time Off (Impact on Pay)"
+      ],
+      "result": {
+        "decision": "no_matching_e2e",
+        "business_process_name": null,
+        "e2e_name": null,
+        "confidence": 45,
+        "confidence_band": "low",
+        "reasoning": "The release note describes a cosmetic branding update involving image replacements within the Help Article Workspace. The provided candidate E2E catalog contains functional business processes related to HCM, Talent, Absence, and Recruitment, none of which cover Help Management or UI branding updates.",
+        "evidence": [
+          "Image Replacements in Help Management",
+          "replaces images in the product",
+          "update the Help Article Workspace by replacing the images"
+        ],
+        "review_required": true,
+        "evaluation": {
+          "model_confidence": 100,
+          "lexical_relevance": 0,
+          "candidate_rank": null,
+          "candidate_margin": 0.0041,
+          "evidence_grounding": 100,
+          "selection_agreement": 0
+        },
+        "raw_prediction": {
+          "decision": "no_matching_e2e",
+          "business_process_name": null,
+          "e2e_name": null,
+          "confidence": 100,
+          "confidence_band": "High",
+          "reasoning": "The release note describes a cosmetic branding update involving image replacements within the Help Article Workspace. The provided candidate E2E catalog contains functional business processes related to HCM, Talent, Absence, and Recruitment, none of which cover Help Management or UI branding updates.",
+          "evidence": [
+            "Image Replacements in Help Management",
+            "replaces images in the product",
+            "update the Help Article Workspace by replacing the images"
+          ],
+          "review_required": false
+        },
+        "model_error": null
+      },
+      "prompt_sha256": "5d75dcf7b0b2c46cedfd05c8b41ddb54162d13aa91074a2edb5fa3d2ba004e83"
+    },
+    {
+      "case_id": "WD2025-MAP-036",
+      "shortlist": [
+        "Create expense item",
+        "ABS_005 - Time Off (Impact on Pay)",
+        "HCM_002 - Personal Elements Change (ESS)",
+        "HCM_003 - Change Contact Information",
+        "ABS_001 - Leave Processing (Paid and Unpaid)",
+        "HCM_001 - Personal Elements Change (HR)",
+        "TAL_005 - Talent Elements (Succession Pool, Talent Pool and Career Profile)",
+        "TAL_004 - Development Plan"
+      ],
+      "result": {
+        "decision": "no_matching_e2e",
+        "business_process_name": null,
+        "e2e_name": null,
+        "confidence": 45,
+        "confidence_band": "low",
+        "reasoning": "The release note describes a corporate brand refresh involving image replacements within the Help Workspace and Case Management. The candidate E2E catalog is comprised of functional business processes (HCM, Talent, Time Off, Expense) and does not contain any test cases related to UI branding, Help Workspace, or Case Management functionality.",
+        "evidence": [
+          "Image Replacements in Case Management",
+          "update the Help Workspace by replacing the images"
+        ],
+        "review_required": true,
+        "evaluation": {
+          "model_confidence": 100,
+          "lexical_relevance": 0,
+          "candidate_rank": null,
+          "candidate_margin": 0.005,
+          "evidence_grounding": 100,
+          "selection_agreement": 0
+        },
+        "raw_prediction": {
+          "decision": "no_matching_e2e",
+          "business_process_name": null,
+          "e2e_name": null,
+          "confidence": 100,
+          "confidence_band": "High",
+          "reasoning": "The release note describes a corporate brand refresh involving image replacements within the Help Workspace and Case Management. The candidate E2E catalog is comprised of functional business processes (HCM, Talent, Time Off, Expense) and does not contain any test cases related to UI branding, Help Workspace, or Case Management functionality.",
+          "evidence": [
+            "Image Replacements in Case Management",
+            "update the Help Workspace by replacing the images"
+          ],
+          "review_required": false
+        },
+        "model_error": null
+      },
+      "prompt_sha256": "b3c3cf9e1c93734513e64aa42bf681f006f684df6414492dd484a643fb1979c7"
+    },
+    {
+      "case_id": "WD2025-MAP-038",
+      "shortlist": [
+        "ADVCOMP_001 - Initiate to Finalize Compensation Review Process",
+        "TAL_002 - Manage Succession Plan",
+        "Create Expense Report for Worker_Non-Worker_Pre-hire",
+        "PAY_002 - Process On Demand Payment",
+        "LRN_001 - Create and Edit a Course, Program, Lesson, and Topic",
+        "TAL_004 - Development Plan",
+        "TAL_005 - Talent Elements (Succession Pool, Talent Pool and Career Profile)",
+        "HCM_001 - Personal Elements Change (HR)"
+      ],
+      "result": {
+        "decision": "no_matching_e2e",
+        "business_process_name": null,
+        "e2e_name": null,
+        "confidence": 45,
+        "confidence_band": "low",
+        "reasoning": "The release note describes a search and help functionality enhancement ('Intelligent Answers') for mobile users to retrieve help articles. The candidate E2E catalog consists of specific business processes (Compensation, Succession, Expense, Payroll, Learning, and HCM) and does not include any test cases for search functionality, mobile UI, or knowledge base integration.",
+        "evidence": [
+          "Intelligent Answers on Mobile",
+          "displays the most relevant Workday Help articles",
+          "search queries on their mobile devices"
+        ],
+        "review_required": true,
+        "evaluation": {
+          "model_confidence": 100,
+          "lexical_relevance": 0,
+          "candidate_rank": null,
+          "candidate_margin": 0.0002,
+          "evidence_grounding": 100,
+          "selection_agreement": 0
+        },
+        "raw_prediction": {
+          "decision": "no_matching_e2e",
+          "business_process_name": null,
+          "e2e_name": null,
+          "confidence": 100,
+          "confidence_band": "High",
+          "reasoning": "The release note describes a search and help functionality enhancement ('Intelligent Answers') for mobile users to retrieve help articles. The candidate E2E catalog consists of specific business processes (Compensation, Succession, Expense, Payroll, Learning, and HCM) and does not include any test cases for search functionality, mobile UI, or knowledge base integration.",
+          "evidence": [
+            "Intelligent Answers on Mobile",
+            "displays the most relevant Workday Help articles",
+            "search queries on their mobile devices"
+          ],
+          "review_required": false
+        },
+        "model_error": null
+      },
+      "prompt_sha256": "751fb51f942ad1b2ef0ea11a8cf657d048824d5990b80b7d3610e79b8c6a4788"
+    },
+    {
+      "case_id": "WD2025-MAP-039",
+      "shortlist": [
+        "ABS_001 - Leave Processing (Paid and Unpaid)",
+        "Create Self Service Expense Report",
+        "PAY_002 - Process On Demand Payment",
+        "Copy an expense report",
+        "TAL_001 - Performance Evaluation",
+        "Create Expense Report for Worker_Non-Worker_Pre-hire",
+        "ABS_005 - Time Off (Impact on Pay)",
+        "TAL_002 - Manage Succession Plan"
+      ],
+      "result": {
+        "decision": "no_matching_e2e",
+        "business_process_name": null,
+        "e2e_name": null,
+        "confidence": 45,
+        "confidence_band": "low",
+        "reasoning": "The release note describes a technical update to a reporting field ('Labels of Business Process Steps Awaiting Action') used to track business process status. This is a system-level reporting enhancement and does not involve the functional execution of any specific business process workflow listed in the candidate catalog.",
+        "evidence": [
+          "Labels of Business Process Steps Awaiting Action Report Field",
+          "replaces the retired Business Process Step or To Do Awaiting Action (Do Not Use) field",
+          "on the Action Event business object"
+        ],
+        "review_required": true,
+        "evaluation": {
+          "model_confidence": 100,
+          "lexical_relevance": 0,
+          "candidate_rank": null,
+          "candidate_margin": 0.0004,
+          "evidence_grounding": 100,
+          "selection_agreement": 0
+        },
+        "raw_prediction": {
+          "decision": "no_matching_e2e",
+          "business_process_name": null,
+          "e2e_name": null,
+          "confidence": 100,
+          "confidence_band": "High",
+          "reasoning": "The release note describes a technical update to a reporting field ('Labels of Business Process Steps Awaiting Action') used to track business process status. This is a system-level reporting enhancement and does not involve the functional execution of any specific business process workflow listed in the candidate catalog.",
+          "evidence": [
+            "Labels of Business Process Steps Awaiting Action Report Field",
+            "replaces the retired Business Process Step or To Do Awaiting Action (Do Not Use) field",
+            "on the Action Event business object"
+          ],
+          "review_required": false
+        },
+        "model_error": null
+      },
+      "prompt_sha256": "e5230686661ddb92af65f58c9241877827ace69ebe7f70ba87fd9c3be2abd684"
+    },
+    {
+      "case_id": "WD2025-MAP-040",
+      "shortlist": [
+        "TT_001 - Time to Pay (Reported, Elapsed and Exception)",
+        "ADVCOMP_001 - Initiate to Finalize Compensation Review Process",
+        "TAL_001 - Performance Evaluation",
+        "HCM_003 - Change Contact Information",
+        "TAL_002 - Manage Succession Plan",
+        "ABS_003 - Retro Leave to Pay",
+        "TAL_006 - Objectives (Add to Delete) (MSS)",
+        "TAL_003 - Performance Improvement Plan"
+      ],
+      "result": {
+        "decision": "no_matching_e2e",
+        "business_process_name": null,
+        "e2e_name": null,
+        "confidence": 45,
+        "confidence_band": "low",
+        "reasoning": "The release note describes a technical enhancement to the Orchestration Builder interface specifically for logging and debugging within the Integration functional area. The provided candidate E2E test cases are focused on Talent, Compensation, Payroll, and HCM processes, none of which encompass orchestration or integration builder tools.",
+        "evidence": [
+          "Logging in Orchestration Builder",
+          "Run Logs available in the Orchestration Builder interface",
+          "Orchestration Builder interface"
+        ],
+        "review_required": true,
+        "evaluation": {
+          "model_confidence": 100,
+          "lexical_relevance": 0,
+          "candidate_rank": null,
+          "candidate_margin": 0.2074,
+          "evidence_grounding": 100,
+          "selection_agreement": 0
+        },
+        "raw_prediction": {
+          "decision": "no_matching_e2e",
+          "business_process_name": null,
+          "e2e_name": null,
+          "confidence": 100,
+          "confidence_band": "High",
+          "reasoning": "The release note describes a technical enhancement to the Orchestration Builder interface specifically for logging and debugging within the Integration functional area. The provided candidate E2E test cases are focused on Talent, Compensation, Payroll, and HCM processes, none of which encompass orchestration or integration builder tools.",
+          "evidence": [
+            "Logging in Orchestration Builder",
+            "Run Logs available in the Orchestration Builder interface",
+            "Orchestration Builder interface"
+          ],
+          "review_required": false
+        },
+        "model_error": null
+      },
+      "prompt_sha256": "fd49454cf363f230fc7710f5ac11009708b793489e78f46475016f3980e7ed87"
+    },
+    {
+      "case_id": "WD2025-MAP-041",
+      "shortlist": [
+        "HCM_009 - Termination to Pay",
+        "HCM_002 - Personal Elements Change (ESS)",
+        "HCM_001 - Personal Elements Change (HR)",
+        "HCM_007 - Contract Contingent Worker",
+        "HCM_003 - Change Contact Information",
+        "HCM_006 - Convert to Employee (Impact on Pay)",
+        "HCM_004 - Hire to Pay",
+        "HCM_005 - Rehire to Pay"
+      ],
+      "result": {
+        "decision": "no_matching_e2e",
+        "business_process_name": null,
+        "e2e_name": null,
+        "confidence": 45,
+        "confidence_band": "low",
+        "reasoning": "The release note describes a user interface update for Peakon Employee Voice survey scheduling. The candidate E2E catalog is limited to core HCM lifecycle processes (Hire, Terminate, Rehire, etc.) and does not include Peakon or survey configuration workflows.",
+        "evidence": [
+          "Peakon Employee Voice",
+          "survey schedule setup page",
+          "preview options for reminder and low participation emails"
+        ],
+        "review_required": true,
+        "evaluation": {
+          "model_confidence": 100,
+          "lexical_relevance": 0,
+          "candidate_rank": null,
+          "candidate_margin": 0.0027,
+          "evidence_grounding": 100,
+          "selection_agreement": 0
+        },
+        "raw_prediction": {
+          "decision": "no_matching_e2e",
+          "business_process_name": null,
+          "e2e_name": null,
+          "confidence": 100,
+          "confidence_band": "High",
+          "reasoning": "The release note describes a user interface update for Peakon Employee Voice survey scheduling. The candidate E2E catalog is limited to core HCM lifecycle processes (Hire, Terminate, Rehire, etc.) and does not include Peakon or survey configuration workflows.",
+          "evidence": [
+            "Peakon Employee Voice",
+            "survey schedule setup page",
+            "preview options for reminder and low participation emails"
+          ],
+          "review_required": false
+        },
+        "model_error": null
+      },
+      "prompt_sha256": "888953d4b73bd757a6f8c6c34cbeb7cd9e3db2d166d4333e7669c0055479729c"
+    },
+    {
+      "case_id": "WD2025-MAP-043",
+      "shortlist": [
+        "HCM_009 - Termination to Pay",
+        "Create Credit Card",
+        "Copy an expense report",
+        "BEN_001 - Change Benefits",
+        "Create expense item",
+        "TAL_002 - Manage Succession Plan",
+        "PAY_004 - Payment Elections (Regular and Bonus)",
+        "Create Self Service Expense Report"
+      ],
+      "result": {
+        "decision": "no_matching_e2e",
+        "business_process_name": null,
+        "e2e_name": null,
+        "confidence": 45,
+        "confidence_band": "low",
+        "reasoning": "The release note describes a technical enhancement to the Object Transporter tool for managing the migration of security policies between tenants. The candidate E2E list contains only functional business processes (HCM, Benefits, Talent, Payroll, Expenses) and does not cover security administration or migration tools.",
+        "evidence": [
+          "Merging Security Policies",
+          "Object Transporter",
+          "migrate modified security policies",
+          "security configuration package"
+        ],
+        "review_required": true,
+        "evaluation": {
+          "model_confidence": 100,
+          "lexical_relevance": 0,
+          "candidate_rank": null,
+          "candidate_margin": 0.0028,
+          "evidence_grounding": 100,
+          "selection_agreement": 0
+        },
+        "raw_prediction": {
+          "decision": "no_matching_e2e",
+          "business_process_name": null,
+          "e2e_name": null,
+          "confidence": 100,
+          "confidence_band": "High",
+          "reasoning": "The release note describes a technical enhancement to the Object Transporter tool for managing the migration of security policies between tenants. The candidate E2E list contains only functional business processes (HCM, Benefits, Talent, Payroll, Expenses) and does not cover security administration or migration tools.",
+          "evidence": [
+            "Merging Security Policies",
+            "Object Transporter",
+            "migrate modified security policies",
+            "security configuration package"
+          ],
+          "review_required": false
+        },
+        "model_error": null
+      },
+      "prompt_sha256": "01e5d249da70bf6e1cf585bed2b4e54b6aeac4b1ae2ac1f8e7613eb2fe4fddaf"
+    },
+    {
+      "case_id": "WD2025-MAP-042",
+      "shortlist": [
+        "PAY_005 - Tax Elections - Federal, State and Local",
+        "PAY_001 - Pay Input to Settlement",
+        "PAY_003 - Address Change to Taxes",
+        "PAY_004 - Payment Elections (Regular and Bonus)",
+        "PAY_002 - Process On Demand Payment",
+        "COMP_002 - Compensation Change to Pay (Retro)",
+        "COMP_001 - Compensation Change to Pay",
+        "COMP_003 - Reward to Pay (One-Time Payment)"
+      ],
+      "result": {
+        "decision": "no_matching_e2e",
+        "business_process_name": null,
+        "e2e_name": null,
+        "confidence": 42,
+        "confidence_band": "low",
+        "reasoning": "The release note describes updates to the 'Maintain Payroll Tax Filing Configuration' task and the ability to map pay components for tax filing integrations. The candidate list includes 'PAY_005 - Tax Elections', but tax elections (employee-side setup) are functionally distinct from tax filing configuration and integration mapping (administrative/system-side setup).",
+        "evidence": [
+          "Maintain Payroll Tax Filing Configuration task",
+          "map additional pay components and pay component groups for tax filing integrations",
+          "Wyoming Earned Tips tax filing category"
+        ],
+        "review_required": true,
+        "evaluation": {
+          "model_confidence": 90,
+          "lexical_relevance": 0,
+          "candidate_rank": null,
+          "candidate_margin": 0.0156,
+          "evidence_grounding": 100,
+          "selection_agreement": 0
+        },
+        "raw_prediction": {
+          "decision": "no_matching_e2e",
+          "business_process_name": null,
+          "e2e_name": null,
+          "confidence": 90,
+          "confidence_band": "High",
+          "reasoning": "The release note describes updates to the 'Maintain Payroll Tax Filing Configuration' task and the ability to map pay components for tax filing integrations. The candidate list includes 'PAY_005 - Tax Elections', but tax elections (employee-side setup) are functionally distinct from tax filing configuration and integration mapping (administrative/system-side setup).",
+          "evidence": [
+            "Maintain Payroll Tax Filing Configuration task",
+            "map additional pay components and pay component groups for tax filing integrations",
+            "Wyoming Earned Tips tax filing category"
+          ],
+          "review_required": true
+        },
+        "model_error": null
+      },
+      "prompt_sha256": "d167ea3a99ccf73f109477d1e92cdb6a696e126c5ea4ae946799eaf3f3c87b61"
+    },
+    {
+      "case_id": "WD2025-MAP-044",
+      "shortlist": [
+        "HCM_003 - Change Contact Information",
+        "HCM_002 - Personal Elements Change (ESS)",
+        "HCM_001 - Personal Elements Change (HR)",
+        "HCM_006 - Convert to Employee (Impact on Pay)",
+        "HCM_009 - Termination to Pay",
+        "HCM_008 - Change Job to Pay",
+        "HCM_007 - Contract Contingent Worker",
+        "HCM_004 - Hire to Pay"
+      ],
+      "result": {
+        "decision": "no_matching_e2e",
+        "business_process_name": null,
+        "e2e_name": null,
+        "confidence": 45,
+        "confidence_band": "low",
+        "reasoning": "The release note describes a localization update (Korean translation) for the Peakon Employee Voice functional area. The candidate E2E test cases are strictly core HCM business processes (Hire, Termination, Job Change, etc.) and do not cover survey localization or Peakon functionality.",
+        "evidence": [
+          "Korean translation of Moments that Matter in Workday Peakon",
+          "change the Korean translation of “Moments that Matter question sets”"
+        ],
+        "review_required": true,
+        "evaluation": {
+          "model_confidence": 100,
+          "lexical_relevance": 0,
+          "candidate_rank": null,
+          "candidate_margin": 0.0098,
+          "evidence_grounding": 100,
+          "selection_agreement": 0
+        },
+        "raw_prediction": {
+          "decision": "no_matching_e2e",
+          "business_process_name": null,
+          "e2e_name": null,
+          "confidence": 100,
+          "confidence_band": "High",
+          "reasoning": "The release note describes a localization update (Korean translation) for the Peakon Employee Voice functional area. The candidate E2E test cases are strictly core HCM business processes (Hire, Termination, Job Change, etc.) and do not cover survey localization or Peakon functionality.",
+          "evidence": [
+            "Korean translation of Moments that Matter in Workday Peakon",
+            "change the Korean translation of “Moments that Matter question sets”"
+          ],
+          "review_required": false
+        },
+        "model_error": null
+      },
+      "prompt_sha256": "d2b92147eefc72326ea199bdaa461f257dca9aa35ef46cdd1e63f58f4ae9cd17"
+    },
+    {
+      "case_id": "WD2025-MAP-045",
+      "shortlist": [
+        "LRN_001 - Create and Edit a Course, Program, Lesson, and Topic",
+        "Copy an expense report",
+        "Create expense item",
+        "Create Self Service Expense Report",
+        "TAL_003 - Performance Improvement Plan",
+        "Create Expense Report for Worker_Non-Worker_Pre-hire",
+        "Create Credit Card",
+        "ADVCOMP_001 - Initiate to Finalize Compensation Review Process"
+      ],
+      "result": {
+        "decision": "no_matching_e2e",
+        "business_process_name": null,
+        "e2e_name": null,
+        "confidence": 45,
+        "confidence_band": "low",
+        "reasoning": "The release note describes UI and navigation enhancements for the People Analytics dashboard, such as new menu options and filtering capabilities. The candidate E2E test cases are focused on Learning, Expense, Talent, and Compensation processes, which do not cover People Analytics navigation.",
+        "evidence": [
+          "redesigned the People Analytics navigation experience",
+          "add these new options to the menu",
+          "bookmark topics in your browser",
+          "add visible filters"
+        ],
+        "review_required": true,
+        "evaluation": {
+          "model_confidence": 100,
+          "lexical_relevance": 0,
+          "candidate_rank": null,
+          "candidate_margin": 0.1712,
+          "evidence_grounding": 100,
+          "selection_agreement": 0
+        },
+        "raw_prediction": {
+          "decision": "no_matching_e2e",
+          "business_process_name": null,
+          "e2e_name": null,
+          "confidence": 100,
+          "confidence_band": "High",
+          "reasoning": "The release note describes UI and navigation enhancements for the People Analytics dashboard, such as new menu options and filtering capabilities. The candidate E2E test cases are focused on Learning, Expense, Talent, and Compensation processes, which do not cover People Analytics navigation.",
+          "evidence": [
+            "redesigned the People Analytics navigation experience",
+            "add these new options to the menu",
+            "bookmark topics in your browser",
+            "add visible filters"
+          ],
+          "review_required": false
+        },
+        "model_error": null
+      },
+      "prompt_sha256": "c89a216163f935da7ff375fc544ca50c9746058b2041de4878e000ebb73168c8"
+    },
+    {
+      "case_id": "WD2025-MAP-046",
+      "shortlist": [
+        "HCM_001 - Personal Elements Change (HR)",
+        "HCM_002 - Personal Elements Change (ESS)",
+        "HCM_009 - Termination to Pay",
+        "HCM_006 - Convert to Employee (Impact on Pay)",
+        "HCM_007 - Contract Contingent Worker",
+        "HCM_003 - Change Contact Information",
+        "HCM_008 - Change Job to Pay",
+        "HCM_004 - Hire to Pay"
+      ],
+      "result": {
+        "decision": "no_matching_e2e",
+        "business_process_name": null,
+        "e2e_name": null,
+        "confidence": 45,
+        "confidence_band": "low",
+        "reasoning": "The release note describes a UI enhancement for filtering comment acknowledgements within the Peakon Employee Voice module. The candidate E2E test cases are exclusively focused on HCM core lifecycle processes (Hire, Termination, Personal Elements, etc.) and do not cover engagement or feedback tool functionality.",
+        "evidence": [
+          "New Filter Options for Comment Acknowledgements",
+          "Peakon Employee Voice",
+          "add 2 new filtering options"
+        ],
+        "review_required": true,
+        "evaluation": {
+          "model_confidence": 100,
+          "lexical_relevance": 0,
+          "candidate_rank": null,
+          "candidate_margin": 0.0007,
+          "evidence_grounding": 100,
+          "selection_agreement": 0
+        },
+        "raw_prediction": {
+          "decision": "no_matching_e2e",
+          "business_process_name": null,
+          "e2e_name": null,
+          "confidence": 100,
+          "confidence_band": "High",
+          "reasoning": "The release note describes a UI enhancement for filtering comment acknowledgements within the Peakon Employee Voice module. The candidate E2E test cases are exclusively focused on HCM core lifecycle processes (Hire, Termination, Personal Elements, etc.) and do not cover engagement or feedback tool functionality.",
+          "evidence": [
+            "New Filter Options for Comment Acknowledgements",
+            "Peakon Employee Voice",
+            "add 2 new filtering options"
+          ],
+          "review_required": false
+        },
+        "model_error": null
+      },
+      "prompt_sha256": "b27a1ae78c7770def2f9e74be750b3db711264cf147be6f38a3914f21d87b5f8"
+    },
+    {
+      "case_id": "WD2025-MAP-047",
+      "shortlist": [
+        "TAL_006 - Objectives (Add to Delete) (MSS)",
+        "TAL_002 - Manage Succession Plan",
+        "TAL_001 - Performance Evaluation",
+        "TAL_005 - Talent Elements (Succession Pool, Talent Pool and Career Profile)",
+        "TAL_009 - Talent Review",
+        "TAL_004 - Development Plan",
+        "TAL_003 - Performance Improvement Plan",
+        "TAL_008 - Disciplinary Plan"
+      ],
+      "result": {
+        "decision": "no_matching_e2e",
+        "business_process_name": null,
+        "e2e_name": null,
+        "confidence": 45,
+        "confidence_band": "low",
+        "reasoning": "The release note describes technical enhancements to the 'Object Transporter Migration Workflow', which is a system implementation tool for migrating configuration packages. The candidate E2E catalog is composed entirely of Talent Management business processes (e.g., Performance Evaluation, Succession Plan, Talent Review), which are unrelated to the technical migration of objects between tenants.",
+        "evidence": [
+          "Object Transporter Migration Workflow",
+          "Migrate with Object Transporter task"
+        ],
+        "review_required": true,
+        "evaluation": {
+          "model_confidence": 100,
+          "lexical_relevance": 0,
+          "candidate_rank": null,
+          "candidate_margin": 0.002,
+          "evidence_grounding": 100,
+          "selection_agreement": 0
+        },
+        "raw_prediction": {
+          "decision": "no_matching_e2e",
+          "business_process_name": null,
+          "e2e_name": null,
+          "confidence": 100,
+          "confidence_band": "High",
+          "reasoning": "The release note describes technical enhancements to the 'Object Transporter Migration Workflow', which is a system implementation tool for migrating configuration packages. The candidate E2E catalog is composed entirely of Talent Management business processes (e.g., Performance Evaluation, Succession Plan, Talent Review), which are unrelated to the technical migration of objects between tenants.",
+          "evidence": [
+            "Object Transporter Migration Workflow",
+            "Migrate with Object Transporter task"
+          ],
+          "review_required": false
+        },
+        "model_error": null
+      },
+      "prompt_sha256": "786a0a456fdcab1a3b4880b5eb61c9a1747c8f9778bc0749fecfc454fdf59ead"
+    },
+    {
+      "case_id": "WD2025-MAP-048",
+      "shortlist": [
+        "HCM_003 - Change Contact Information",
+        "PAY_004 - Payment Elections (Regular and Bonus)",
+        "PAY_005 - Tax Elections - Federal, State and Local",
+        "LRN_001 - Create and Edit a Course, Program, Lesson, and Topic",
+        "HCM_009 - Termination to Pay",
+        "PAY_002 - Process On Demand Payment",
+        "ABS_002 - Return from Leave (Paid and Unpaid)",
+        "PAY_001 - Pay Input to Settlement"
+      ],
+      "result": {
+        "decision": "no_matching_e2e",
+        "business_process_name": null,
+        "e2e_name": null,
+        "confidence": 45,
+        "confidence_band": "low",
+        "reasoning": "The release note describes technical updates to specific OPM Connector integrations (EHRI and eOPF) involving field mapping, security for audit files, and exclusion logic for Personnel Action Request events. The candidate E2E list contains standard HCM and Payroll business processes (Contact Information, Payment Elections, Tax Elections, etc.), but none cover the specific integration logic or the OPM Connector functionality described.",
+        "evidence": [
+          "OPM Connector: EHRI and eOPF Integrations",
+          "updates the field mapping and delivers new integration attributes on the OPM Connector: EHRI and OPM Connector: eOPF integrations",
+          "excludes Personnel Action Request events"
+        ],
+        "review_required": true,
+        "evaluation": {
+          "model_confidence": 100,
+          "lexical_relevance": 0,
+          "candidate_rank": null,
+          "candidate_margin": 0.01,
+          "evidence_grounding": 100,
+          "selection_agreement": 0
+        },
+        "raw_prediction": {
+          "decision": "no_matching_e2e",
+          "business_process_name": null,
+          "e2e_name": null,
+          "confidence": 100,
+          "confidence_band": "high",
+          "reasoning": "The release note describes technical updates to specific OPM Connector integrations (EHRI and eOPF) involving field mapping, security for audit files, and exclusion logic for Personnel Action Request events. The candidate E2E list contains standard HCM and Payroll business processes (Contact Information, Payment Elections, Tax Elections, etc.), but none cover the specific integration logic or the OPM Connector functionality described.",
+          "evidence": [
+            "OPM Connector: EHRI and eOPF Integrations",
+            "updates the field mapping and delivers new integration attributes on the OPM Connector: EHRI and OPM Connector: eOPF integrations",
+            "excludes Personnel Action Request events"
+          ],
+          "review_required": false
+        },
+        "model_error": null
+      },
+      "prompt_sha256": "2ea2350ceb58d635dd550afedbaf2a28af1125d3d97844b64ca526c375caf27c"
+    },
+    {
+      "case_id": "WD2025-MAP-049",
+      "shortlist": [
+        "LRN_001 - Create and Edit a Course, Program, Lesson, and Topic",
+        "BEN_001 - Change Benefits",
+        "ADVCOMP_001 - Initiate to Finalize Compensation Review Process",
+        "COMP_001 - Compensation Change to Pay",
+        "COMP_002 - Compensation Change to Pay (Retro)",
+        "TAL_005 - Talent Elements (Succession Pool, Talent Pool and Career Profile)",
+        "PAY_005 - Tax Elections - Federal, State and Local",
+        "Create Expense Report for Worker_Non-Worker_Pre-hire"
+      ],
+      "result": {
+        "decision": "no_matching_e2e",
+        "business_process_name": null,
+        "e2e_name": null,
+        "confidence": 45,
+        "confidence_band": "low",
+        "reasoning": "The release note describes a system-level opt-in process for a new 'Adoption Planning' feature via the 'Maintain Feature Opt-Ins report'. None of the provided E2E test cases (Learning, Benefits, Compensation, Talent, Tax, or Expenses) cover feature enrollment or the specific 'Adoption Planning' functionality.",
+        "evidence": [
+          "Opt-In for New Adoption Planning Feature Early Adopter Program",
+          "Maintain Feature Opt-Ins report"
+        ],
+        "review_required": true,
+        "evaluation": {
+          "model_confidence": 100,
+          "lexical_relevance": 0,
+          "candidate_rank": null,
+          "candidate_margin": 0.043,
+          "evidence_grounding": 100,
+          "selection_agreement": 0
+        },
+        "raw_prediction": {
+          "decision": "no_matching_e2e",
+          "business_process_name": null,
+          "e2e_name": null,
+          "confidence": 100,
+          "confidence_band": "High",
+          "reasoning": "The release note describes a system-level opt-in process for a new 'Adoption Planning' feature via the 'Maintain Feature Opt-Ins report'. None of the provided E2E test cases (Learning, Benefits, Compensation, Talent, Tax, or Expenses) cover feature enrollment or the specific 'Adoption Planning' functionality.",
+          "evidence": [
+            "Opt-In for New Adoption Planning Feature Early Adopter Program",
+            "Maintain Feature Opt-Ins report"
+          ],
+          "review_required": false
+        },
+        "model_error": null
+      },
+      "prompt_sha256": "68b5d5e492bedeef086a8406de429e55f4eb1da5f3b6def3ca65c10d77d34820"
+    },
+    {
+      "case_id": "WD2025-MAP-051",
+      "shortlist": [
+        "HCM_001 - Personal Elements Change (HR)",
+        "HCM_002 - Personal Elements Change (ESS)",
+        "HCM_006 - Convert to Employee (Impact on Pay)",
+        "HCM_009 - Termination to Pay",
+        "HCM_003 - Change Contact Information",
+        "HCM_007 - Contract Contingent Worker",
+        "HCM_008 - Change Job to Pay",
+        "HCM_004 - Hire to Pay"
+      ],
+      "result": {
+        "decision": "no_matching_e2e",
+        "business_process_name": null,
+        "e2e_name": null,
+        "confidence": 45,
+        "confidence_band": "low",
+        "reasoning": "The release note describes an update to industry benchmarks within the Peakon Employee Voice module. The candidate E2E catalog is strictly limited to HCM core lifecycle processes such as hiring, termination, and personal element changes, which do not encompass Peakon benchmarking functionality.",
+        "evidence": [
+          "Peakon Benchmarks",
+          "update industry benchmarks on Workday Peakon Employee Voice"
+        ],
+        "review_required": true,
+        "evaluation": {
+          "model_confidence": 100,
+          "lexical_relevance": 0,
+          "candidate_rank": null,
+          "candidate_margin": 0.0014,
+          "evidence_grounding": 100,
+          "selection_agreement": 0
+        },
+        "raw_prediction": {
+          "decision": "no_matching_e2e",
+          "business_process_name": null,
+          "e2e_name": null,
+          "confidence": 100,
+          "confidence_band": "High",
+          "reasoning": "The release note describes an update to industry benchmarks within the Peakon Employee Voice module. The candidate E2E catalog is strictly limited to HCM core lifecycle processes such as hiring, termination, and personal element changes, which do not encompass Peakon benchmarking functionality.",
+          "evidence": [
+            "Peakon Benchmarks",
+            "update industry benchmarks on Workday Peakon Employee Voice"
+          ],
+          "review_required": false
+        },
+        "model_error": null
+      },
+      "prompt_sha256": "2c46b9e74f6e1835724d7a54641ebc9d694482b2f99795a50f7da1e5d420db32"
+    },
+    {
+      "case_id": "WD2025-MAP-053",
+      "shortlist": [
+        "PAY_002 - Process On Demand Payment",
+        "COMP_001 - Compensation Change to Pay",
+        "PAY_001 - Pay Input to Settlement",
+        "COMP_002 - Compensation Change to Pay (Retro)",
+        "HCM_003 - Change Contact Information",
+        "TAL_008 - Disciplinary Plan",
+        "HCM_001 - Personal Elements Change (HR)",
+        "HCM_002 - Personal Elements Change (ESS)"
+      ],
+      "result": {
+        "decision": "no_matching_e2e",
+        "business_process_name": null,
+        "e2e_name": null,
+        "confidence": 45,
+        "confidence_band": "low",
+        "reasoning": "The release note describes a technical enhancement to Prism Analytics regarding aggregation limits in reports. The candidate E2E list is comprised entirely of Payroll, Compensation, HCM, and Talent business processes, which do not cover Prism Analytics reporting functionality.",
+        "evidence": [
+          "Prism Count Distinct Limit Enhancement",
+          "increase the limit of count distinct aggregation from 5,000 instances to 1 million instances"
+        ],
+        "review_required": true,
+        "evaluation": {
+          "model_confidence": 100,
+          "lexical_relevance": 0,
+          "candidate_rank": null,
+          "candidate_margin": 0.0022,
+          "evidence_grounding": 100,
+          "selection_agreement": 0
+        },
+        "raw_prediction": {
+          "decision": "no_matching_e2e",
+          "business_process_name": null,
+          "e2e_name": null,
+          "confidence": 100,
+          "confidence_band": "High",
+          "reasoning": "The release note describes a technical enhancement to Prism Analytics regarding aggregation limits in reports. The candidate E2E list is comprised entirely of Payroll, Compensation, HCM, and Talent business processes, which do not cover Prism Analytics reporting functionality.",
+          "evidence": [
+            "Prism Count Distinct Limit Enhancement",
+            "increase the limit of count distinct aggregation from 5,000 instances to 1 million instances"
+          ],
+          "review_required": false
+        },
+        "model_error": null
+      },
+      "prompt_sha256": "04fc0ec0c6c715d1e942ef452678bba540b650e44d3bf2e2462453b0ee6556c1"
+    },
+    {
+      "case_id": "WD2025-MAP-052",
+      "shortlist": [
+        "HCM_006 - Convert to Employee (Impact on Pay)",
+        "HCM_001 - Personal Elements Change (HR)",
+        "HCM_002 - Personal Elements Change (ESS)",
+        "HCM_003 - Change Contact Information",
+        "HCM_007 - Contract Contingent Worker",
+        "HCM_009 - Termination to Pay",
+        "HCM_005 - Rehire to Pay",
+        "HCM_008 - Change Job to Pay"
+      ],
+      "result": {
+        "decision": "no_matching_e2e",
+        "business_process_name": null,
+        "e2e_name": null,
+        "confidence": 45,
+        "confidence_band": "low",
+        "reasoning": "The release note describes a cosmetic branding update for PowerPoint exports within the Peakon Employee Voice product. The candidate E2E catalog is strictly limited to HCM core business processes (e.g., employee lifecycle, personal data changes, and pay impacts) and does not contain any test cases related to Peakon or reporting exports.",
+        "evidence": [
+          "PowerPoint Export Images Replacement",
+          "replaces images in the PowerPoint export",
+          "update the Peakon PowerPoint export"
+        ],
+        "review_required": true,
+        "evaluation": {
+          "model_confidence": 100,
+          "lexical_relevance": 0,
+          "candidate_rank": null,
+          "candidate_margin": 0.0017,
+          "evidence_grounding": 100,
+          "selection_agreement": 0
+        },
+        "raw_prediction": {
+          "decision": "no_matching_e2e",
+          "business_process_name": null,
+          "e2e_name": null,
+          "confidence": 100,
+          "confidence_band": "High",
+          "reasoning": "The release note describes a cosmetic branding update for PowerPoint exports within the Peakon Employee Voice product. The candidate E2E catalog is strictly limited to HCM core business processes (e.g., employee lifecycle, personal data changes, and pay impacts) and does not contain any test cases related to Peakon or reporting exports.",
+          "evidence": [
+            "PowerPoint Export Images Replacement",
+            "replaces images in the PowerPoint export",
+            "update the Peakon PowerPoint export"
+          ],
+          "review_required": false
+        },
+        "model_error": null
+      },
+      "prompt_sha256": "99174ef46c3606464747967655b609e576514902b8eaa582259661e24ae05251"
+    },
+    {
+      "case_id": "WD2025-MAP-054",
+      "shortlist": [
+        "COMP_001 - Compensation Change to Pay",
+        "COMP_002 - Compensation Change to Pay (Retro)",
+        "HCM_002 - Personal Elements Change (ESS)",
+        "ADVCOMP_001 - Initiate to Finalize Compensation Review Process",
+        "HCM_001 - Personal Elements Change (HR)",
+        "TAL_001 - Performance Evaluation",
+        "Create Expense Report for Worker_Non-Worker_Pre-hire",
+        "PAY_003 - Address Change to Taxes"
+      ],
+      "result": {
+        "decision": "no_matching_e2e",
+        "business_process_name": null,
+        "e2e_name": null,
+        "confidence": 45,
+        "confidence_band": "low",
+        "reasoning": "The release note describes an update to a SOAP API for Workday Procurement objects (specifically Suppliers and Supplier Contracts) to support custom integrations. The candidate E2E catalog contains only processes related to Compensation, HCM, Talent, and Expense Reports, which do not cover Procurement or Supplier management.",
+        "evidence": [
+          "Put External Reference on Spend Transaction SOAP API",
+          "update existing Workday Procurement objects",
+          "Supplier Contracts",
+          "Suppliers"
+        ],
+        "review_required": true,
+        "evaluation": {
+          "model_confidence": 100,
+          "lexical_relevance": 0,
+          "candidate_rank": null,
+          "candidate_margin": 0.0022,
+          "evidence_grounding": 100,
+          "selection_agreement": 0
+        },
+        "raw_prediction": {
+          "decision": "no_matching_e2e",
+          "business_process_name": null,
+          "e2e_name": null,
+          "confidence": 100,
+          "confidence_band": "High",
+          "reasoning": "The release note describes an update to a SOAP API for Workday Procurement objects (specifically Suppliers and Supplier Contracts) to support custom integrations. The candidate E2E catalog contains only processes related to Compensation, HCM, Talent, and Expense Reports, which do not cover Procurement or Supplier management.",
+          "evidence": [
+            "Put External Reference on Spend Transaction SOAP API",
+            "update existing Workday Procurement objects",
+            "Supplier Contracts",
+            "Suppliers"
+          ],
+          "review_required": false
+        },
+        "model_error": null
+      },
+      "prompt_sha256": "4206b2d55d2c3aaaff4aa395a9f6aa87d3a6c7968dd66040aa853510bfd07dff"
+    },
+    {
+      "case_id": "WD2025-MAP-055",
+      "shortlist": [
+        "HCM_009 - Termination to Pay",
+        "HCM_003 - Change Contact Information",
+        "HCM_001 - Personal Elements Change (HR)",
+        "HCM_002 - Personal Elements Change (ESS)",
+        "HCM_007 - Contract Contingent Worker",
+        "HCM_008 - Change Job to Pay",
+        "HCM_006 - Convert to Employee (Impact on Pay)",
+        "HCM_004 - Hire to Pay"
+      ],
+      "result": {
+        "decision": "no_matching_e2e",
+        "business_process_name": null,
+        "e2e_name": null,
+        "confidence": 45,
+        "confidence_band": "low",
+        "reasoning": "The release note describes UI/UX enhancements for question administration within the Peakon Employee Voice module. The candidate E2E catalog consists exclusively of core HCM business processes (Hire, Termination, Change Job, etc.) and does not contain any test cases related to Peakon or employee engagement administration.",
+        "evidence": [
+          "Question Administration Cross-Platform UI Improvements",
+          "Workday Peakon",
+          "improve question administration"
+        ],
+        "review_required": true,
+        "evaluation": {
+          "model_confidence": 100,
+          "lexical_relevance": 0,
+          "candidate_rank": null,
+          "candidate_margin": 0.0046,
+          "evidence_grounding": 100,
+          "selection_agreement": 0
+        },
+        "raw_prediction": {
+          "decision": "no_matching_e2e",
+          "business_process_name": null,
+          "e2e_name": null,
+          "confidence": 100,
+          "confidence_band": "High",
+          "reasoning": "The release note describes UI/UX enhancements for question administration within the Peakon Employee Voice module. The candidate E2E catalog consists exclusively of core HCM business processes (Hire, Termination, Change Job, etc.) and does not contain any test cases related to Peakon or employee engagement administration.",
+          "evidence": [
+            "Question Administration Cross-Platform UI Improvements",
+            "Workday Peakon",
+            "improve question administration"
+          ],
+          "review_required": false
+        },
+        "model_error": null
+      },
+      "prompt_sha256": "0477ad5eb6e5344eebd0f1043e28d4e0a9a2c84b496fc02e629ac8e07beaf3d7"
+    },
+    {
+      "case_id": "WD2025-MAP-056",
+      "shortlist": [
+        "HCM_009 - Termination to Pay",
+        "HCM_003 - Change Contact Information",
+        "HCM_007 - Contract Contingent Worker",
+        "HCM_001 - Personal Elements Change (HR)",
+        "HCM_002 - Personal Elements Change (ESS)",
+        "HCM_006 - Convert to Employee (Impact on Pay)",
+        "HCM_004 - Hire to Pay",
+        "HCM_005 - Rehire to Pay"
+      ],
+      "result": {
+        "decision": "no_matching_e2e",
+        "business_process_name": null,
+        "e2e_name": null,
+        "confidence": 45,
+        "confidence_band": "low",
+        "reasoning": "The release note describes UI usability improvements for the Peakon Employee Voice question administration area. The candidate E2E catalog consists exclusively of HCM core lifecycle processes (Hire, Rehire, Terminate, Change Contact, etc.) and does not contain any test cases related to Peakon or survey administration.",
+        "evidence": [
+          "Question Administration UI Improvements",
+          "improve the usability of the question administration area"
+        ],
+        "review_required": true,
+        "evaluation": {
+          "model_confidence": 100,
+          "lexical_relevance": 0,
+          "candidate_rank": null,
+          "candidate_margin": 0.0076,
+          "evidence_grounding": 100,
+          "selection_agreement": 0
+        },
+        "raw_prediction": {
+          "decision": "no_matching_e2e",
+          "business_process_name": null,
+          "e2e_name": null,
+          "confidence": 100,
+          "confidence_band": "High",
+          "reasoning": "The release note describes UI usability improvements for the Peakon Employee Voice question administration area. The candidate E2E catalog consists exclusively of HCM core lifecycle processes (Hire, Rehire, Terminate, Change Contact, etc.) and does not contain any test cases related to Peakon or survey administration.",
+          "evidence": [
+            "Question Administration UI Improvements",
+            "improve the usability of the question administration area"
+          ],
+          "review_required": false
+        },
+        "model_error": null
+      },
+      "prompt_sha256": "efa42c5dd577b345d91d9e39207c5588c6454c5a2848061d129325e9f2912e6c"
+    },
+    {
+      "case_id": "WD2025-MAP-057",
+      "shortlist": [
+        "HCM_003 - Change Contact Information",
+        "HCM_001 - Personal Elements Change (HR)",
+        "HCM_009 - Termination to Pay",
+        "HCM_006 - Convert to Employee (Impact on Pay)",
+        "HCM_008 - Change Job to Pay",
+        "HCM_004 - Hire to Pay",
+        "HCM_005 - Rehire to Pay",
+        "HCM_002 - Personal Elements Change (ESS)"
+      ],
+      "result": {
+        "decision": "no_matching_e2e",
+        "business_process_name": null,
+        "e2e_name": null,
+        "confidence": 45,
+        "confidence_band": "low",
+        "reasoning": "The release note describes a UI label change for 'Question Localization' within the 'Peakon Employee Voice' functional area. The candidate E2E catalog is strictly limited to HCM core lifecycle processes (Hire, Rehire, Termination, etc.) and does not contain any test cases related to Peakon or survey configuration.",
+        "evidence": [
+          "Question Localization",
+          "rename the field label from Localization to Question localization",
+          "Edit question slide-in panel"
+        ],
+        "review_required": true,
+        "evaluation": {
+          "model_confidence": 100,
+          "lexical_relevance": 0,
+          "candidate_rank": null,
+          "candidate_margin": 0.0168,
+          "evidence_grounding": 100,
+          "selection_agreement": 0
+        },
+        "raw_prediction": {
+          "decision": "no_matching_e2e",
+          "business_process_name": null,
+          "e2e_name": null,
+          "confidence": 100,
+          "confidence_band": "High",
+          "reasoning": "The release note describes a UI label change for 'Question Localization' within the 'Peakon Employee Voice' functional area. The candidate E2E catalog is strictly limited to HCM core lifecycle processes (Hire, Rehire, Termination, etc.) and does not contain any test cases related to Peakon or survey configuration.",
+          "evidence": [
+            "Question Localization",
+            "rename the field label from Localization to Question localization",
+            "Edit question slide-in panel"
+          ],
+          "review_required": false
+        },
+        "model_error": null
+      },
+      "prompt_sha256": "1292f6e6b1caa84f7c81e087620244cd2674a07a1458f90efc592e1a7e1dfd41"
+    },
+    {
+      "case_id": "WD2025-MAP-058",
+      "shortlist": [
+        "HCM_001 - Personal Elements Change (HR)",
+        "HCM_002 - Personal Elements Change (ESS)",
+        "HCM_003 - Change Contact Information",
+        "HCM_009 - Termination to Pay",
+        "HCM_006 - Convert to Employee (Impact on Pay)",
+        "HCM_007 - Contract Contingent Worker",
+        "HCM_008 - Change Job to Pay",
+        "HCM_004 - Hire to Pay"
+      ],
+      "result": {
+        "decision": "no_matching_e2e",
+        "business_process_name": null,
+        "e2e_name": null,
+        "confidence": 45,
+        "confidence_band": "low",
+        "reasoning": "The release note describes a UI usability enhancement for the Peakon Employee Voice module, specifically regarding how survey questions are displayed on the administration page. The candidate E2E test cases are all focused on HCM lifecycle and personal data management processes (e.g., Hire to Pay, Termination, Personal Elements Change), which do not cover survey administration functionality.",
+        "evidence": [
+          "Peakon Employee Voice",
+          "Questions administration page",
+          "each survey question now has its own row"
+        ],
+        "review_required": true,
+        "evaluation": {
+          "model_confidence": 100,
+          "lexical_relevance": 0,
+          "candidate_rank": null,
+          "candidate_margin": 0.001,
+          "evidence_grounding": 100,
+          "selection_agreement": 0
+        },
+        "raw_prediction": {
+          "decision": "no_matching_e2e",
+          "business_process_name": null,
+          "e2e_name": null,
+          "confidence": 100,
+          "confidence_band": "High",
+          "reasoning": "The release note describes a UI usability enhancement for the Peakon Employee Voice module, specifically regarding how survey questions are displayed on the administration page. The candidate E2E test cases are all focused on HCM lifecycle and personal data management processes (e.g., Hire to Pay, Termination, Personal Elements Change), which do not cover survey administration functionality.",
+          "evidence": [
+            "Peakon Employee Voice",
+            "Questions administration page",
+            "each survey question now has its own row"
+          ],
+          "review_required": false
+        },
+        "model_error": null
+      },
+      "prompt_sha256": "a22b463528b3add0472b6962b6e83505d08f4acd1333ed90a4f90604369b95d0"
+    },
+    {
+      "case_id": "WD2025-MAP-060",
+      "shortlist": [
+        "HCM_003 - Change Contact Information",
+        "ADVCOMP_001 - Initiate to Finalize Compensation Review Process",
+        "Create Self Service Expense Report",
+        "REC_003 - Recruit an Internal Candidate",
+        "Create Expense Report for Worker_Non-Worker_Pre-hire",
+        "COMP_002 - Compensation Change to Pay (Retro)",
+        "BEN_001 - Change Benefits",
+        "COMP_001 - Compensation Change to Pay"
+      ],
+      "result": {
+        "decision": "no_matching_e2e",
+        "business_process_name": null,
+        "e2e_name": null,
+        "confidence": 45,
+        "confidence_band": "low",
+        "reasoning": "The release note describes a security configuration change (renaming a security domain in Innovation Services). The candidate E2E catalog consists of functional business processes (HCM, Compensation, Expense, Recruitment, Benefits) which do not encompass security domain management.",
+        "evidence": [
+          "Renamed Security Domain for Innovation Services",
+          "Workday renames the ML Features Notification domain to AI Features and Third Party Notification"
+        ],
+        "review_required": true,
+        "evaluation": {
+          "model_confidence": 100,
+          "lexical_relevance": 0,
+          "candidate_rank": null,
+          "candidate_margin": 0.0003,
+          "evidence_grounding": 100,
+          "selection_agreement": 0
+        },
+        "raw_prediction": {
+          "decision": "no_matching_e2e",
+          "business_process_name": null,
+          "e2e_name": null,
+          "confidence": 100,
+          "confidence_band": "High",
+          "reasoning": "The release note describes a security configuration change (renaming a security domain in Innovation Services). The candidate E2E catalog consists of functional business processes (HCM, Compensation, Expense, Recruitment, Benefits) which do not encompass security domain management.",
+          "evidence": [
+            "Renamed Security Domain for Innovation Services",
+            "Workday renames the ML Features Notification domain to AI Features and Third Party Notification"
+          ],
+          "review_required": false
+        },
+        "model_error": null
+      },
+      "prompt_sha256": "b2dcbe0ea59d4da5aef6971293e0dc719a74584d1e9359d544f8fb31f7867754"
+    },
+    {
+      "case_id": "WD2025-MAP-059",
+      "shortlist": [
+        "HCM_003 - Change Contact Information",
+        "HCM_002 - Personal Elements Change (ESS)",
+        "HCM_007 - Contract Contingent Worker",
+        "HCM_001 - Personal Elements Change (HR)",
+        "HCM_009 - Termination to Pay",
+        "HCM_006 - Convert to Employee (Impact on Pay)",
+        "HCM_008 - Change Job to Pay",
+        "HCM_005 - Rehire to Pay"
+      ],
+      "result": {
+        "decision": "no_matching_e2e",
+        "business_process_name": null,
+        "e2e_name": null,
+        "confidence": 43,
+        "confidence_band": "low",
+        "reasoning": "The release note describes a configuration change to the 'Maintain Ethnicities' task, which is a setup/reference data maintenance function. The candidate E2E list consists of transactional workflows for worker data (e.g., Personal Elements Change, Contact Information Change) and does not include a test case for the maintenance of reference data or configuration tasks.",
+        "evidence": [
+          "Maintain Ethnicities task",
+          "configuring ethnicities",
+          "enter a Race/Ethnicity with a duplicate name"
+        ],
+        "review_required": true,
+        "evaluation": {
+          "model_confidence": 95,
+          "lexical_relevance": 0,
+          "candidate_rank": null,
+          "candidate_margin": 0.0015,
+          "evidence_grounding": 100,
+          "selection_agreement": 0
+        },
+        "raw_prediction": {
+          "decision": "no_matching_e2e",
+          "business_process_name": null,
+          "e2e_name": null,
+          "confidence": 95,
+          "confidence_band": "High",
+          "reasoning": "The release note describes a configuration change to the 'Maintain Ethnicities' task, which is a setup/reference data maintenance function. The candidate E2E list consists of transactional workflows for worker data (e.g., Personal Elements Change, Contact Information Change) and does not include a test case for the maintenance of reference data or configuration tasks.",
+          "evidence": [
+            "Maintain Ethnicities task",
+            "configuring ethnicities",
+            "enter a Race/Ethnicity with a duplicate name"
+          ],
+          "review_required": true
+        },
+        "model_error": null
+      },
+      "prompt_sha256": "d362b5da7190f0391a19bddc965f111782aafec0f34af960d6e2833d782e82d7"
+    },
+    {
+      "case_id": "WD2025-MAP-061",
+      "shortlist": [
+        "PAY_003 - Address Change to Taxes",
+        "PAY_001 - Pay Input to Settlement",
+        "PAY_002 - Process On Demand Payment",
+        "PAY_004 - Payment Elections (Regular and Bonus)",
+        "PAY_005 - Tax Elections - Federal, State and Local",
+        "HCM_009 - Termination to Pay",
+        "HCM_008 - Change Job to Pay",
+        "COMP_003 - Reward to Pay (One-Time Payment)"
+      ],
+      "result": {
+        "decision": "match",
+        "business_process_name": null,
+        "e2e_name": "PAY_005 - Tax Elections - Federal, State and Local",
+        "confidence": 72,
+        "confidence_band": "medium",
+        "reasoning": "The release note introduces a new Seattle-specific tax authority and deduction, noting that workers must be configured with a 'tax election' to trigger the tax. This falls under the scope of managing state and local tax elections.",
+        "evidence": [
+          "Seattle Social Housing Tax",
+          "tax election",
+          "WA: Seattle Social Housing Tax - Employer Paid payroll other tax authority"
+        ],
+        "review_required": true,
+        "evaluation": {
+          "model_confidence": 90,
+          "lexical_relevance": 54,
+          "candidate_rank": 5,
+          "candidate_margin": 0.0062,
+          "evidence_grounding": 100,
+          "selection_agreement": 60
+        },
+        "raw_prediction": {
+          "decision": "match",
+          "business_process_name": null,
+          "e2e_name": "PAY_005 - Tax Elections - Federal, State and Local",
+          "confidence": 90,
+          "confidence_band": "High",
+          "reasoning": "The release note introduces a new Seattle-specific tax authority and deduction, noting that workers must be configured with a 'tax election' to trigger the tax. This falls under the scope of managing state and local tax elections.",
+          "evidence": [
+            "Seattle Social Housing Tax",
+            "tax election",
+            "WA: Seattle Social Housing Tax - Employer Paid payroll other tax authority"
+          ],
+          "review_required": false
+        },
+        "model_error": null
+      },
+      "prompt_sha256": "af8ddc3e9f3f3263fefb9838121ec3136659f7d1c9a9fc9bc4b700a23fce9b17"
+    },
+    {
+      "case_id": "WD2025-MAP-063",
+      "shortlist": [
+        "PAY_004 - Payment Elections (Regular and Bonus)",
+        "PAY_005 - Tax Elections - Federal, State and Local",
+        "ABS_002 - Return from Leave (Paid and Unpaid)",
+        "COMP_001 - Compensation Change to Pay",
+        "TAL_006 - Objectives (Add to Delete) (MSS)",
+        "TAL_003 - Performance Improvement Plan",
+        "TAL_001 - Performance Evaluation",
+        "COMP_002 - Compensation Change to Pay (Retro)"
+      ],
+      "result": {
+        "decision": "no_matching_e2e",
+        "business_process_name": null,
+        "e2e_name": null,
+        "confidence": 45,
+        "confidence_band": "low",
+        "reasoning": "The release note describes a technical security update regarding encryption ciphers and MAC algorithms for the Document Delivery and Retrieval service. The candidate E2E test cases are all functional business processes related to Payroll, Absence, Compensation, and Talent management, which do not cover integration security or document delivery services.",
+        "evidence": [
+          "Support for New Encryption Ciphers and MACs",
+          "Document Delivery and Retrieval service"
+        ],
+        "review_required": true,
+        "evaluation": {
+          "model_confidence": 100,
+          "lexical_relevance": 0,
+          "candidate_rank": null,
+          "candidate_margin": 0.0072,
+          "evidence_grounding": 100,
+          "selection_agreement": 0
+        },
+        "raw_prediction": {
+          "decision": "no_matching_e2e",
+          "business_process_name": null,
+          "e2e_name": null,
+          "confidence": 100,
+          "confidence_band": "High",
+          "reasoning": "The release note describes a technical security update regarding encryption ciphers and MAC algorithms for the Document Delivery and Retrieval service. The candidate E2E test cases are all functional business processes related to Payroll, Absence, Compensation, and Talent management, which do not cover integration security or document delivery services.",
+          "evidence": [
+            "Support for New Encryption Ciphers and MACs",
+            "Document Delivery and Retrieval service"
+          ],
+          "review_required": false
+        },
+        "model_error": null
+      },
+      "prompt_sha256": "9853bd867700057099e30b0b4eb1e047917d20500f6b1d53923afd7e0b6910c8"
+    },
+    {
+      "case_id": "WD2025-MAP-062",
+      "shortlist": [
+        "HCM_002 - Personal Elements Change (ESS)",
+        "HCM_001 - Personal Elements Change (HR)",
+        "HCM_003 - Change Contact Information",
+        "HCM_009 - Termination to Pay",
+        "ABS_002 - Return from Leave (Paid and Unpaid)",
+        "HCM_006 - Convert to Employee (Impact on Pay)",
+        "ABS_004 - Retro Return from Leave to Pay",
+        "ABS_005 - Time Off (Impact on Pay)"
+      ],
+      "result": {
+        "decision": "no_matching_e2e",
+        "business_process_name": null,
+        "e2e_name": null,
+        "confidence": 43,
+        "confidence_band": "low",
+        "reasoning": "The release note describes a security domain update ('Administrator for Person View') to control access to the 'View Person' task and protect National ID information. The candidate E2E catalog consists of functional business process flows (e.g., Personal Elements Change, Contact Information Change) but does not include security-specific test cases or domain-level access control validation. While the security change impacts the visibility of data during certain business processes, the feature itself is a security configuration change that falls outside the explicit scope of the provided functional E2E catalog.",
+        "evidence": [
+          "increase security for National ID information",
+          "deliver the new Administrator for Person View domain",
+          "secure only the View Person task"
+        ],
+        "review_required": true,
+        "evaluation": {
+          "model_confidence": 95,
+          "lexical_relevance": 0,
+          "candidate_rank": null,
+          "candidate_margin": 0.0043,
+          "evidence_grounding": 100,
+          "selection_agreement": 0
+        },
+        "raw_prediction": {
+          "decision": "no_matching_e2e",
+          "business_process_name": null,
+          "e2e_name": null,
+          "confidence": 95,
+          "confidence_band": "High",
+          "reasoning": "The release note describes a security domain update ('Administrator for Person View') to control access to the 'View Person' task and protect National ID information. The candidate E2E catalog consists of functional business process flows (e.g., Personal Elements Change, Contact Information Change) but does not include security-specific test cases or domain-level access control validation. While the security change impacts the visibility of data during certain business processes, the feature itself is a security configuration change that falls outside the explicit scope of the provided functional E2E catalog.",
+          "evidence": [
+            "increase security for National ID information",
+            "deliver the new Administrator for Person View domain",
+            "secure only the View Person task"
+          ],
+          "review_required": true
+        },
+        "model_error": null
+      },
+      "prompt_sha256": "f93b3188cad6c9552dbd229abc66d16f4be11440b189cd801f86e55d5c56865f"
+    },
+    {
+      "case_id": "WD2025-MAP-064",
+      "shortlist": [
+        "LRN_001 - Create and Edit a Course, Program, Lesson, and Topic",
+        "PAY_005 - Tax Elections - Federal, State and Local",
+        "PAY_004 - Payment Elections (Regular and Bonus)",
+        "Create Expense Report for Worker_Non-Worker_Pre-hire",
+        "TT_001 - Time to Pay (Reported, Elapsed and Exception)",
+        "HCM_001 - Personal Elements Change (HR)",
+        "ABS_002 - Return from Leave (Paid and Unpaid)",
+        "HCM_002 - Personal Elements Change (ESS)"
+      ],
+      "result": {
+        "decision": "no_matching_e2e",
+        "business_process_name": null,
+        "e2e_name": null,
+        "confidence": 45,
+        "confidence_band": "low",
+        "reasoning": "The release note describes notification enhancements for the Learning Enrollment business process (requests and approvals) via Workday Everywhere. The only Learning-related candidate in the catalog, LRN_001, pertains to the creation and editing of course content (Course, Program, Lesson, Topic), which is a different functional workflow than enrollment and approval notifications.",
+        "evidence": [
+          "Workday Everywhere Notifications for Learning Enrollment Requests and Approvals",
+          "When a worker has enrolled in a Learning course for which the corresponding business process requires approval",
+          "When their enrollment request is approved or denied"
+        ],
+        "review_required": true,
+        "evaluation": {
+          "model_confidence": 100,
+          "lexical_relevance": 0,
+          "candidate_rank": null,
+          "candidate_margin": 0.2754,
+          "evidence_grounding": 100,
+          "selection_agreement": 0
+        },
+        "raw_prediction": {
+          "decision": "no_matching_e2e",
+          "business_process_name": null,
+          "e2e_name": null,
+          "confidence": 100,
+          "confidence_band": "High",
+          "reasoning": "The release note describes notification enhancements for the Learning Enrollment business process (requests and approvals) via Workday Everywhere. The only Learning-related candidate in the catalog, LRN_001, pertains to the creation and editing of course content (Course, Program, Lesson, Topic), which is a different functional workflow than enrollment and approval notifications.",
+          "evidence": [
+            "Workday Everywhere Notifications for Learning Enrollment Requests and Approvals",
+            "When a worker has enrolled in a Learning course for which the corresponding business process requires approval",
+            "When their enrollment request is approved or denied"
+          ],
+          "review_required": false
+        },
+        "model_error": null
+      },
+      "prompt_sha256": "1c45d7d4a04eac0d1c5750c332fbba6783de866f20482b30f6537c8e632bbf64"
+    },
+    {
+      "case_id": "WD2025-MAP-066",
+      "shortlist": [
+        "TAL_001 - Performance Evaluation",
+        "HCM_003 - Change Contact Information",
+        "REC_001 - Create to Close (Job Requisition)",
+        "Create Expense Report for Worker_Non-Worker_Pre-hire",
+        "REC_004 - Refer a Candidate",
+        "ABS_002 - Return from Leave (Paid and Unpaid)",
+        "HCM_009 - Termination to Pay",
+        "TT_001 - Time to Pay (Reported, Elapsed and Exception)"
+      ],
+      "result": {
+        "decision": "no_matching_e2e",
+        "business_process_name": null,
+        "e2e_name": null,
+        "confidence": 45,
+        "confidence_band": "low",
+        "reasoning": "The release note describes a technical enhancement to XSLT 3.0 support for Enterprise Interface Builder (EIB) integrations. The candidate E2E catalog contains only functional business processes (HCM, Recruiting, Time, Expense) and does not include any integration or data transformation test cases.",
+        "evidence": [
+          "XSLT 3.0 for EIB Transformations",
+          "configuring transformations for an Enterprise Interface Builder (EIB) integration"
+        ],
+        "review_required": true,
+        "evaluation": {
+          "model_confidence": 100,
+          "lexical_relevance": 0,
+          "candidate_rank": null,
+          "candidate_margin": 0.0048,
+          "evidence_grounding": 100,
+          "selection_agreement": 0
+        },
+        "raw_prediction": {
+          "decision": "no_matching_e2e",
+          "business_process_name": null,
+          "e2e_name": null,
+          "confidence": 100,
+          "confidence_band": "High",
+          "reasoning": "The release note describes a technical enhancement to XSLT 3.0 support for Enterprise Interface Builder (EIB) integrations. The candidate E2E catalog contains only functional business processes (HCM, Recruiting, Time, Expense) and does not include any integration or data transformation test cases.",
+          "evidence": [
+            "XSLT 3.0 for EIB Transformations",
+            "configuring transformations for an Enterprise Interface Builder (EIB) integration"
+          ],
+          "review_required": false
+        },
+        "model_error": null
+      },
+      "prompt_sha256": "ccb6d37a3e8e2a33ac47c9aa1eb56c42f5ef0733e7077bdc3782e9e075858fa8"
+    },
+    {
+      "case_id": "WD2025-MAP-065",
+      "shortlist": [
+        "TT_001 - Time to Pay (Reported, Elapsed and Exception)",
+        "HCM_002 - Personal Elements Change (ESS)",
+        "HCM_001 - Personal Elements Change (HR)",
+        "HCM_003 - Change Contact Information",
+        "HCM_007 - Contract Contingent Worker",
+        "HCM_004 - Hire to Pay",
+        "HCM_005 - Rehire to Pay",
+        "HCM_006 - Convert to Employee (Impact on Pay)"
+      ],
+      "result": {
+        "decision": "unable_to_identify",
+        "business_process_name": null,
+        "e2e_name": null,
+        "confidence": 0,
+        "confidence_band": "low",
+        "reasoning": "Model returned no text output",
+        "evidence": [],
+        "review_required": true,
+        "shortlisted_candidates": [
+          "TT_001 - Time to Pay (Reported, Elapsed and Exception)",
+          "HCM_002 - Personal Elements Change (ESS)",
+          "HCM_001 - Personal Elements Change (HR)",
+          "HCM_003 - Change Contact Information",
+          "HCM_007 - Contract Contingent Worker",
+          "HCM_004 - Hire to Pay",
+          "HCM_005 - Rehire to Pay",
+          "HCM_006 - Convert to Employee (Impact on Pay)"
+        ],
+        "raw_prediction": null,
+        "model_error": "Model returned no text output"
+      },
+      "prompt_sha256": "155eebbdc007c319219510c6532cc39ebe2d2ea1b489a687c5a849bab3430e4b"
+    }
+  ]
+}

@@ -1,0 +1,2 @@
+﻿case_id,source_row,title,gold_decision,predicted_decision,selected,missed_tests,unnecessary_tests,miss_stage,pipeline_exact_match,model_confidence,pipeline_confidence,raw_hallucinations,model_error
+WD2025-MAP-002,2,Enhanced Accessibility for Table Editing and Row Actions,unable_to_identify,unable_to_identify,[],[],[],,False,,0,[],"Model endpoint returned HTTP 500. Check model access, key and quota."

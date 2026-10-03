@@ -11,3 +11,27 @@
 .evaluation { display:grid; gap:4px; margin-top:12px; padding-top:10px; border-top:1px solid var(--line); color:var(--muted); font:10px 'DM Mono',monospace; } .evaluation b { color:var(--ink); font-family:'DM Sans',sans-serif; font-size:11px; }
 footer { display:flex; justify-content:space-between; color:#899590; font:10px 'DM Mono',monospace; padding:5px 3px; }
 @media (max-width:700px) { .shell { padding:28px 16px; } .file-grid { grid-template-columns:1fr; } .section-head,.preview,footer { align-items:flex-start; flex-direction:column; } .result-actions { width:100%; justify-content:space-between; } .actions { justify-content:stretch; } .actions .button { flex:1; } h1 { font-size:46px; } }
+.eval-panel { margin-top: 24px; padding: 28px; }
+.eval-panel .actions { flex-wrap: wrap; margin: 20px 0; gap: 16px; }
+.eval-panel label { display: flex; gap: 8px; align-items: center; }
+.eval-panel input[type=number] { width: 70px; padding: 8px; }
+.eval-panel pre { white-space: pre-wrap; overflow-wrap: anywhere; max-width: 650px; font-size: 12px; }
+.eval-panel small { display: block; margin-top: 6px; }
+.eval-versions div { display: grid; grid-template-columns: 180px 1fr; gap: 16px; padding: 6px 0; }
+.eval-versions dd { margin: 0; overflow-wrap: anywhere; }
+.observability { padding-bottom: 20px; margin-bottom: 24px; border-bottom: 1px solid #d9e2ea; }
+
+.feedback-form {display:grid;gap:12px;min-width:280px;max-width:600px;padding:16px 0;}
+.feedback-form label,.feedback-entry>label {display:grid;gap:6px;}
+.feedback-form fieldset {max-height:240px;overflow:auto;border:1px solid #ccd5dc;border-radius:8px;}
+.feedback-form fieldset label {display:flex;align-items:center;gap:8px;padding:5px;}
+textarea {width:100%;min-height:90px;padding:10px;border:1px solid #ccd5dc;border-radius:8px;font:inherit;}
+.feedback-entry {border-top:1px solid #ccd5dc;margin-top:24px;padding-top:20px;}
+.feedback-entry pre {max-height:320px;overflow:auto;white-space:pre-wrap;overflow-wrap:anywhere;}
+.row-feedback {margin-top:12px;}
+.feedback-panel {padding:28px;}
+.feedback-panel .actions {flex-wrap:wrap;justify-content:flex-start;align-items:flex-end;}
+.feedback-panel .actions label {display:grid;gap:6px;font-size:13px;}
+.feedback-panel input,.feedback-form input:not([type=checkbox]) {border:1px solid var(--line);border-radius:8px;padding:10px;font:inherit;}
+.feedback-panel p {line-height:1.6;}
+.upload-panel .actions {flex-wrap:wrap;align-items:center;}

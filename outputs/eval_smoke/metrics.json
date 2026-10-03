@@ -1,0 +1,312 @@
+{
+  "metrics": {
+    "recall": {
+      "value": null,
+      "numerator": 0,
+      "denominator": 0
+    },
+    "precision": {
+      "value": null,
+      "numerator": 0,
+      "denominator": 0
+    },
+    "false_negatives": {
+      "count": 0,
+      "case_ids": []
+    },
+    "false_positives": {
+      "count": 0,
+      "case_ids": []
+    },
+    "exact_match_rate": {
+      "value": 0.0,
+      "numerator": 0,
+      "denominator": 1
+    },
+    "top_k_retrieval_recall": {
+      "k": 8,
+      "value": null,
+      "retrieved_cases": 0,
+      "eligible_cases": 0
+    },
+    "no_match_accuracy": {
+      "value": null,
+      "numerator": 0,
+      "denominator": 0
+    },
+    "hallucination_rate": {
+      "value": null,
+      "hallucinated_responses": 0,
+      "successful_raw_responses": 0
+    },
+    "confidence_calibration": {
+      "raw_model": {
+        "sample_count": 0,
+        "bins": [
+          {
+            "range": "0-10%",
+            "count": 0,
+            "mean_confidence": null,
+            "accuracy": null,
+            "gap": null
+          },
+          {
+            "range": "10-20%",
+            "count": 0,
+            "mean_confidence": null,
+            "accuracy": null,
+            "gap": null
+          },
+          {
+            "range": "20-30%",
+            "count": 0,
+            "mean_confidence": null,
+            "accuracy": null,
+            "gap": null
+          },
+          {
+            "range": "30-40%",
+            "count": 0,
+            "mean_confidence": null,
+            "accuracy": null,
+            "gap": null
+          },
+          {
+            "range": "40-50%",
+            "count": 0,
+            "mean_confidence": null,
+            "accuracy": null,
+            "gap": null
+          },
+          {
+            "range": "50-60%",
+            "count": 0,
+            "mean_confidence": null,
+            "accuracy": null,
+            "gap": null
+          },
+          {
+            "range": "60-70%",
+            "count": 0,
+            "mean_confidence": null,
+            "accuracy": null,
+            "gap": null
+          },
+          {
+            "range": "70-80%",
+            "count": 0,
+            "mean_confidence": null,
+            "accuracy": null,
+            "gap": null
+          },
+          {
+            "range": "80-90%",
+            "count": 0,
+            "mean_confidence": null,
+            "accuracy": null,
+            "gap": null
+          },
+          {
+            "range": "90-100%",
+            "count": 0,
+            "mean_confidence": null,
+            "accuracy": null,
+            "gap": null
+          }
+        ],
+        "expected_calibration_error": null,
+        "brier_score": null,
+        "high_confidence_threshold": 0.8,
+        "high_confidence_count": 0,
+        "high_confidence_accuracy": null
+      },
+      "pipeline_heuristic": {
+        "sample_count": 0,
+        "bins": [
+          {
+            "range": "0-10%",
+            "count": 0,
+            "mean_confidence": null,
+            "accuracy": null,
+            "gap": null
+          },
+          {
+            "range": "10-20%",
+            "count": 0,
+            "mean_confidence": null,
+            "accuracy": null,
+            "gap": null
+          },
+          {
+            "range": "20-30%",
+            "count": 0,
+            "mean_confidence": null,
+            "accuracy": null,
+            "gap": null
+          },
+          {
+            "range": "30-40%",
+            "count": 0,
+            "mean_confidence": null,
+            "accuracy": null,
+            "gap": null
+          },
+          {
+            "range": "40-50%",
+            "count": 0,
+            "mean_confidence": null,
+            "accuracy": null,
+            "gap": null
+          },
+          {
+            "range": "50-60%",
+            "count": 0,
+            "mean_confidence": null,
+            "accuracy": null,
+            "gap": null
+          },
+          {
+            "range": "60-70%",
+            "count": 0,
+            "mean_confidence": null,
+            "accuracy": null,
+            "gap": null
+          },
+          {
+            "range": "70-80%",
+            "count": 0,
+            "mean_confidence": null,
+            "accuracy": null,
+            "gap": null
+          },
+          {
+            "range": "80-90%",
+            "count": 0,
+            "mean_confidence": null,
+            "accuracy": null,
+            "gap": null
+          },
+          {
+            "range": "90-100%",
+            "count": 0,
+            "mean_confidence": null,
+            "accuracy": null,
+            "gap": null
+          }
+        ],
+        "expected_calibration_error": null,
+        "brier_score": null,
+        "high_confidence_threshold": 0.8,
+        "high_confidence_count": 0,
+        "high_confidence_accuracy": null
+      }
+    }
+  },
+  "diagnostics": {
+    "true_positive_count": 0,
+    "case_count": 1,
+    "successful_model_responses": 0,
+    "model_error_count": 1,
+    "pipeline_exact_match_rate": 0.0,
+    "gold_match_only_exact_rate": null,
+    "unable_to_identify_accuracy": 0.0,
+    "confusion_matrix": [
+      {
+        "gold": "unable_to_identify",
+        "prediction": "model_error",
+        "count": 1
+      }
+    ]
+  },
+  "per_case": [
+    {
+      "case_id": "WD2025-MAP-002",
+      "source_row": 2,
+      "title": "Enhanced Accessibility for Table Editing and Row Actions",
+      "gold_decision": "unable_to_identify",
+      "predicted_decision": "unable_to_identify",
+      "accepted_gold_sets": [
+        []
+      ],
+      "selected": [],
+      "true_positives": 0,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "missed_tests": [],
+      "unnecessary_tests": [],
+      "set_exact_match": false,
+      "decision_correct": false,
+      "pipeline_exact_match": false,
+      "shortlist": [
+        "TAL_005 - Talent Elements (Succession Pool, Talent Pool and Career Profile)",
+        "ABS_001 - Leave Processing (Paid and Unpaid)",
+        "PAY_002 - Process On Demand Payment",
+        "ABS_002 - Return from Leave (Paid and Unpaid)",
+        "TAL_002 - Manage Succession Plan",
+        "HCM_003 - Change Contact Information",
+        "Create Credit Card",
+        "LRN_001 - Create and Edit a Course, Program, Lesson, and Topic"
+      ],
+      "retrieval_hit": null,
+      "retrieval_recall": null,
+      "miss_stage": null,
+      "raw_hallucinations": [],
+      "raw_correct": false,
+      "model_confidence": null,
+      "pipeline_confidence": 0,
+      "model_error": "Model endpoint returned HTTP 500. Check model access, key and quota."
+    }
+  ],
+  "run": {
+    "dataset_id": "workday_2025_release_regression_golden_v1",
+    "dataset_sha256": "85a3cc6f76dde2cb1082f9889f5434582cdbe6c15cbb6d87c014b459b6833d51",
+    "provider": "gemma",
+    "model": "gemma-4-26b-a4b-it",
+    "split": "all",
+    "include_controls": false,
+    "k": 8,
+    "replayed": false,
+    "completed_utc": "2026-10-01T11:42:08.775039+00:00",
+    "evaluated_cases": 1,
+    "partial_run": true,
+    "quality_status": "provider_errors_present"
+  },
+  "metric_explanations": {
+    "recall": {
+      "formula": "TP / (TP + FN)",
+      "why_it_matters": "Measures missed required coverage. Low recall can leave changed payroll or security behavior untested."
+    },
+    "precision": {
+      "formula": "TP / (TP + FP)",
+      "why_it_matters": "Measures useful recommendations. Low precision consumes consultant time on unnecessary tests."
+    },
+    "false_negatives": {
+      "formula": "Count of required golden selections that were not returned",
+      "why_it_matters": "Review these first. Each case shows the missed test and whether retrieval or later selection failed."
+    },
+    "false_positives": {
+      "formula": "Count of returned selections outside the accepted golden answer",
+      "why_it_matters": "Shows wasted regression effort. A wrong test on a positive case produces both an FP and an FN."
+    },
+    "exact_match_rate": {
+      "formula": "Cases whose complete selected set equals any accepted golden set / evaluated cases",
+      "why_it_matters": "Measures full set agreement. Empty matches count, so also inspect positive-case accuracy and the decision confusion matrix."
+    },
+    "top_k_retrieval_recall": {
+      "formula": "Average fraction of an accepted required set present in the actual K-item shortlist, across gold-match cases",
+      "why_it_matters": "Separates retrieval problems from LLM problems. The LLM cannot choose a correct test that it never sees."
+    },
+    "no_match_accuracy": {
+      "formula": "Correct no_matching_e2e decisions / gold no_matching_e2e cases",
+      "why_it_matters": "Checks catalog-gap recognition. unable_to_identify is a different decision and receives no credit here."
+    },
+    "hallucination_rate": {
+      "formula": "Successful raw responses naming an out-of-catalog test / successful raw responses",
+      "why_it_matters": "Measures invention before guardrails remove invalid names. A valid catalog test outside the shortlist is a retrieval/selection violation, not a catalog hallucination."
+    },
+    "confidence_calibration": {
+      "formula": "ECE = sum(bin_count/N * abs(mean_confidence - accuracy)); Brier = mean((confidence - correctness)^2)",
+      "why_it_matters": "Checks whether reported certainty matches observed correctness. Both scores are better near zero. The app score is a heuristic, not a calibrated probability."
+    }
+  }
+}

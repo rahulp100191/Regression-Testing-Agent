@@ -1,0 +1,36 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug API (Docker)",
+      "type": "debugpy",
+      "request": "attach",
+      "connect": { "host": "localhost", "port": 5678 },
+      "pathMappings": [{ "localRoot": "${workspaceFolder}/backend", "remoteRoot": "/workspace/backend" }],
+      "justMyCode": true
+    },
+    {
+      "name": "Debug evaluation worker (Docker)",
+      "type": "debugpy",
+      "request": "attach",
+      "connect": { "host": "localhost", "port": 5679 },
+      "pathMappings": [{ "localRoot": "${workspaceFolder}/backend", "remoteRoot": "/workspace/backend" }],
+      "justMyCode": true
+    },
+    {
+      "name": "Debug UI (Chrome)",
+      "type": "pwa-chrome",
+      "request": "launch",
+      "url": "http://localhost:3000",
+      "webRoot": "${workspaceFolder}/frontend"
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Run and debug full app",
+      "configurations": ["Debug API (Docker)", "Debug evaluation worker (Docker)", "Debug UI (Chrome)"],
+      "preLaunchTask": "Start debug stack",
+      "stopAll": true
+    }
+  ]
+}
